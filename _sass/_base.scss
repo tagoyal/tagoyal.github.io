@@ -17,6 +17,18 @@ body{
   line-height: 1.5;
 }
 
+a{
+  // padding-bottom: 5px;
+  color: #AB2C00;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  position:relative;
+  top:-1px;
+}
+
 .wrapper:before,
 .wrapper:after { content:""; display:table; }
 .wrapper:after { clear: both; }

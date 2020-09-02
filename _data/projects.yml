@@ -1,16 +1,26 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
 
-# jazznotes.io
-- project: jazznotes.io
-  role: Founder & Primary Developer
-  duration: 2012 &mdash; Present
-  # url: "#"
-  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+- title: Neural Syntactic Preordering for Controlled Paraphrase Generation
+  authors: Tanya Goyal and Greg Durrett. 
+  venue: Proceedings of ACL 2020.
+  url: https://www.aclweb.org/anthology/2020.acl-main.22.pdf
+  metadata: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> // Bib
 
-# Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
-  # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
+- title: Embedding time expressions for deep temporal ordering models
+  authors: Tanya Goyal and Greg Durrett. 
+  venue: Proceedings of ACL 2019.
+  url: https://www.aclweb.org/anthology/P19-1433.pdf
+  metadata: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> // Bib
+
+- title: Your Behavior Signals Your Reliability- Modeling Crowd Behavioral Tracesto Ensure Quality Relevance Annotations
+  authors: Tanya Goyal, Tyler McDonnell, Mucahid Kutlu, Tamer Elsayed and Matthew Lease. 
+  venue: Proceedings of HCOMP 2018.
+  url: https://www.aclweb.org/anthology/P19-1433.pdf
+  metadata: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> // Bib
+
+- title: An Empirical Analysis of Edit Importance between Document Versions
+  authors: Tanya Goyal, Sachin Kelkar, Manas Agarwal and Jeenu Grover.
+  venue: Proceedings of EMNLP 2017.
+  url: https://www.aclweb.org/anthology/D17-1295.pdf
+  #metadata: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> // Bib
