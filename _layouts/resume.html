@@ -2,6 +2,14 @@
 <html>
 
   {% include head.html %}
+  <script>
+        function unhide(divID) {
+                var item = document.getElementById(divID);
+                if (item) {
+                    item.hidden=(item.hidden)?false:true;
+                }
+        }
+    </script>
 
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
 
@@ -81,8 +89,8 @@
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <h3 class="resume-item-copy" style="" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.title }}</a>{% endif %}</h3>
           <h4 class="resume-item-copy" itemprop="description">{{ project.authors}} <i> {{project.venue}}</i></h4>
-          <p class="resume-item-copy">{{ project.metadata }}</p>
-        </div>
+          <p class="resume-item-copy">{{ project.code }} // <a href="javascript:unhide('{{project.bibtex}}');" class="bibtex">Bibtex</a><div id="{{project.bibtex}}" hidden>@{{project.bibtexcontent}}</div></p>
+          
         {% endfor %}
 
       </section>
