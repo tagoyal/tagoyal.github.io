@@ -30,14 +30,13 @@
   venue: Proceedings of HCOMP 2018.
   url: https://www.aclweb.org/anthology/P19-1433.pdf
   bibtex: goyalhcomp2018
-  bibtexcontent: inproceedings{Goyal18-hcomp,
-                  title = {{Your Behavior Signals Your Reliability:&nbspModeling Crowd Behavioral Traces to Ensure Quality Relevance Annotations}},
-                  author = {Tanya Goyal and Tyler McDonnell and Mucahid Kutlu and Tamer Elsayed and Matthew Lease},
-                  booktitle = {Proceedings of the 6th AAAI Conference on Human Computation and Crowdsourcing (HCOMP)},
+  bibtexcontent: inproceedings{Goyal18-hcomp,  </br>
+                  title = {{Your Behavior Signals Your Reliability:&nbspModeling Crowd Behavioral Traces to Ensure Quality Relevance Annotations}},  </br>
+                  author = {Tanya Goyal and Tyler McDonnell and Mucahid Kutlu and Tamer Elsayed and Matthew Lease},  </br>
+                  booktitle = {Proceedings of the 6th AAAI Conference on Human Computation and Crowdsourcing (HCOMP)},  </br>
                   year = 2018,}
 
 - title: An Empirical Analysis of Edit Importance between Document Versions
   authors: Tanya Goyal, Sachin Kelkar, Manas Agarwal and Jeenu Grover.
   venue: Proceedings of EMNLP 2017.
   url: https://www.aclweb.org/anthology/D17-1295.pdf
-  

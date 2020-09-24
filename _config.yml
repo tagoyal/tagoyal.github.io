@@ -40,7 +40,7 @@ resume_looking_for_work:        ""
 # comment out to hide
 resume_section_education:       false
 resume_section_projects:        true
-resume_section_skills:          true
+resume_section_skills:          false
 resume_section_recognition:     false
 resume_section_links:           false
 resume_section_associations:    false
