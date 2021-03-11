@@ -60,3 +60,9 @@
   authors: Tanya Goyal, Sachin Kelkar, Manas Agarwal and Jeenu Grover.
   venue: Proceedings of EMNLP 2017.
   url: https://www.aclweb.org/anthology/D17-1295.pdf
+  bibtex: goyalemnlp2017
+  bibtexcontent:  inproceedings{goyal2017empirical,
+                  title={An Empirical Analysis of Edit Importance between Document Versions},
+                  author={Goyal, Tanya and Kelkar, Sachin and Agarwal, Manas and Grover, Jeenu},
+                  booktitle={Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing},
+                  year={2017},}
