@@ -12,7 +12,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: Findings of EMNLP 2020.
   url: https://www.aclweb.org/anthology/2020.findings-emnlp.322.pdf
-  code: <a href="https://github.com/tagoyal/dae-factuality">Code</a> // 
+  code: <a href="https://github.com/tagoyal/dae-factuality">Code</a> // <a href="emnlp2020_poster.pdf"> Poster </a> //
   bibtex: goyalemnlpf2020
   bibtexcontent:  inproceedings{goyal2020evaluating, </br>
                   title = {Evaluating Factuality in Generation with Dependency-level Entailment}, </br>
