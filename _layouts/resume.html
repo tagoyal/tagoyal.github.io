@@ -89,7 +89,7 @@
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <h3 class="resume-item-copy" style="" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.title }}</a>{% endif %}</h3>
           <h4 class="resume-item-copy" itemprop="description">{{ project.authors}} <i> {{project.venue}}</i></h4>
-          <p class="resume-item-copy">{{ project.code }} // <a href="javascript:unhide('{{project.bibtex}}');" class="bibtex">Bibtex</a><div id="{{project.bibtex}}" hidden>@{{project.bibtexcontent}}</div></p>
+          <p class="resume-item-copy">{{ project.code }} <a href="javascript:unhide('{{project.bibtex}}');" class="bibtex">Bibtex</a><div id="{{project.bibtex}}" hidden>@{{project.bibtexcontent}}</div></p>
           
         {% endfor %}
 
