@@ -1,10 +1,18 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
+- title: Aligning Datasets and Models for Evaluating Factuality in Generation 
+  authors: Tanya Goyal and Greg Durrett. 
+  venue: NAACL 2021.
+
 - title: Evaluating Factuality in Generation with Dependency-level Entailment
   authors: Tanya Goyal and Greg Durrett. 
   venue: Findings of EMNLP 2020.
-  url: emnlp2020.pdf
-  bibtex: goyalemnlp2020
+  url: https://www.aclweb.org/anthology/2020.findings-emnlp.322.pdf
+  bibtexcontent:  inproceedings{goyal2020evaluating, </br>
+                  title = {Evaluating Factuality in Generation with Dependency-level Entailment}, </br>
+                  author = {Goyal, Tanya and Durrett, Greg}, </br>
+                  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing:Findings}, </br>
+                  year={2020},}
 
 
 - title: Neural Syntactic Preordering for Controlled Paraphrase Generation
