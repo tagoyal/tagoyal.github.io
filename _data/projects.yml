@@ -23,7 +23,7 @@
 
 - title: Neural Syntactic Preordering for Controlled Paraphrase Generation
   authors: Tanya Goyal and Greg Durrett. 
-  venue: Proceedings of ACL 2020.
+  venue: ACL 2020.
   url: https://www.aclweb.org/anthology/2020.acl-main.22.pdf
   code: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> // 
   bibtex: goyalacl2020
@@ -35,7 +35,7 @@
 
 - title: Embedding time expressions for deep temporal ordering models
   authors: Tanya Goyal and Greg Durrett. 
-  venue: Proceedings of ACL 2019.
+  venue: ACL 2019.
   url: https://www.aclweb.org/anthology/P19-1433.pdf
   code: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> //
   bibtex: goyalacl2019
@@ -47,7 +47,7 @@
 
 - title: Your Behavior Signals Your Reliability:&nbspModeling Crowd Behavioral Tracesto Ensure Quality Relevance Annotations
   authors: Tanya Goyal, Tyler McDonnell, Mucahid Kutlu, Tamer Elsayed and Matthew Lease. 
-  venue: Proceedings of HCOMP 2018.
+  venue: HCOMP 2018.
   url: https://www.aclweb.org/anthology/P19-1433.pdf
   bibtex: goyalhcomp2018
   bibtexcontent: inproceedings{Goyal18-hcomp,  </br>
@@ -56,9 +56,9 @@
                   booktitle = {Proceedings of the 6th AAAI Conference on Human Computation and Crowdsourcing (HCOMP)},  </br>
                   year = 2018,}
 
-- title: An Empirical Analysis of Edit Importance between Document Versions
+- title: An Empirical Analysis of Edit Importance between Document Versions (short)
   authors: Tanya Goyal, Sachin Kelkar, Manas Agarwal and Jeenu Grover.
-  venue: Proceedings of EMNLP 2017.
+  venue: EMNLP 2017.
   url: https://www.aclweb.org/anthology/D17-1295.pdf
   bibtex: goyalemnlp2017
   bibtexcontent:  inproceedings{goyal2017empirical, </br>
