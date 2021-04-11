@@ -1,12 +1,16 @@
 # Projects
 # uncomment the urls if you wish to display them, and add your own URL
-- title: Aligning Datasets and Models for Evaluating Factuality in Generation 
+- title: Annotating and Modeling Fine-grained Factuality in Summarization 
   authors: Tanya Goyal and Greg Durrett. 
   venue: NAACL 2021.
   url: Tanya_Naacl2021.pdf
   code: Code (to be updated)
   bibtex: goyalnaacl2021
-
+  bibtexcontent:  inproceedings{goyal2020annotating, </br>
+                  title = {Annotating and Modeling Fine-grained Factuality in Summarization}, </br>
+                  author = {Tanya Goyal and Greg Durrett}, </br>
+                  booktitle = {Proceedings of NAACL}, </br>
+                  year = {2021},}
 
 - title: Evaluating Factuality in Generation with Dependency-level Entailment
   authors: Tanya Goyal and Greg Durrett. 
@@ -17,7 +21,7 @@
   bibtexcontent:  inproceedings{goyal2020evaluating, </br>
                   title = {Evaluating Factuality in Generation with Dependency-level Entailment}, </br>
                   author = {Goyal, Tanya and Durrett, Greg}, </br>
-                  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing:Findings}, </br>
+                  booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing :Findings}, </br>
                   year={2020},}
 
 
