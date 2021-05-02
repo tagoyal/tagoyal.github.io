@@ -3,8 +3,8 @@
 - title: Annotating and Modeling Fine-grained Factuality in Summarization 
   authors: Tanya Goyal and Greg Durrett. 
   venue: NAACL 2021.
-  url: Tanya_Naacl2021.pdf
-  code: <a href="https://github.com/tagoyal/factuality-datasets">Code</a> &middot;
+  url: https://arxiv.org/pdf/2104.04302.pdf
+  code: <a href="https://github.com/tagoyal/factuality-datasets">Code</a> &#9679
   bibtex: goyalnaacl2021
   bibtexcontent:  inproceedings{goyal2020annotating, </br>
                   title = {Annotating and Modeling Fine-grained Factuality in Summarization}, </br>
@@ -16,7 +16,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: Findings of EMNLP 2020.
   url: https://www.aclweb.org/anthology/2020.findings-emnlp.322.pdf
-  code: <a href="https://github.com/tagoyal/dae-factuality">Code</a> &middot;  <a href="emnlp2020_poster.pdf"> Poster </a> &middot;
+  code: <a href="https://github.com/tagoyal/dae-factuality">Code</a> &#9679  <a href="emnlp2020_poster.pdf"> Poster </a> &#9679
   bibtex: goyalemnlpf2020
   bibtexcontent:  inproceedings{goyal2020evaluating, </br>
                   title = {Evaluating Factuality in Generation with Dependency-level Entailment}, </br>
@@ -29,7 +29,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: ACL 2020.
   url: https://www.aclweb.org/anthology/2020.acl-main.22.pdf
-  code: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> &middot;
+  code: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> &#9679
   bibtex: goyalacl2020
   bibtexcontent:  inproceedings{Goyal-Durrett:2020:Syntaxparaphrase, </br>
                   title = {Neural Syntactic Preordering for Controlled Paraphrase Generation}, </br>
@@ -41,7 +41,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: ACL 2019.
   url: https://www.aclweb.org/anthology/P19-1433.pdf
-  code: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> &middot;
+  code: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> &#9679
   bibtex: goyalacl2019
   bibtexcontent: inproceedings{Goyal-Durrett:2019:Time, </br>
                   title = {Embedding time expressions for deep temporal ordering models}, </br>
