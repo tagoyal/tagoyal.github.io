@@ -4,7 +4,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: NAACL 2021.
   url: Tanya_Naacl2021.pdf
-  code: Code (to be updated)
+  code: <a href="https://github.com/tagoyal/factuality-datasets">Code</a>
   bibtex: goyalnaacl2021
   bibtexcontent:  inproceedings{goyal2020annotating, </br>
                   title = {Annotating and Modeling Fine-grained Factuality in Summarization}, </br>
@@ -16,7 +16,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: Findings of EMNLP 2020.
   url: https://www.aclweb.org/anthology/2020.findings-emnlp.322.pdf
-  code: <a href="https://github.com/tagoyal/dae-factuality">Code</a> // <a href="emnlp2020_poster.pdf"> Poster </a> //
+  code: <a href="https://github.com/tagoyal/dae-factuality">Code</a>  <a href="emnlp2020_poster.pdf"> Poster </a> 
   bibtex: goyalemnlpf2020
   bibtexcontent:  inproceedings{goyal2020evaluating, </br>
                   title = {Evaluating Factuality in Generation with Dependency-level Entailment}, </br>
@@ -29,7 +29,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: ACL 2020.
   url: https://www.aclweb.org/anthology/2020.acl-main.22.pdf
-  code: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> // 
+  code: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> 
   bibtex: goyalacl2020
   bibtexcontent:  inproceedings{Goyal-Durrett:2020:Syntaxparaphrase, </br>
                   title = {Neural Syntactic Preordering for Controlled Paraphrase Generation}, </br>
@@ -41,7 +41,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: ACL 2019.
   url: https://www.aclweb.org/anthology/P19-1433.pdf
-  code: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> //
+  code: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> 
   bibtex: goyalacl2019
   bibtexcontent: inproceedings{Goyal-Durrett:2019:Time, </br>
                   title = {Embedding time expressions for deep temporal ordering models}, </br>
