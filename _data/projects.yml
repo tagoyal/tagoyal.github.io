@@ -1,4 +1,27 @@
 # Projects
+- title: Training Dynamics for Text Summarization Models 
+  authors: Tanya Goyal, Jiacheng Xu, Junyi Jessy Li, Greg Durrett.
+  venue: preprint 2021.
+  url: https://arxiv.org/abs/2110.08370
+  bibtex: goyal2021training
+  bibtexcontent:  \@article{goyal2021training,  </br>
+                  title={Training Dynamics for Text Summarization Models},  </br>
+                  author={Tanya Goyal and Jiacheng Xu and Junyi Jessy Li and Greg Durrett}, </br>
+                  year={2021}, </br>
+                  journal={arXiv preprint arXiv:2110.08370},} </br>
+ 
+- title: HydraSum - Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models
+  authors: Tanya Goyal, Nazneen Fatema Rajani, Wenhao Liu, Wojciech Kryściński.
+  venue: preprint 2021.
+  url: https://arxiv.org/abs/2110.04400
+  code: <a href="https://github.com/salesforce/hydra-sum">Code</a> &#9679
+  bibtex: goyalnaacl2021
+  bibtexcontent:  \@article{goyal2021hydrasum, </br>
+                   title={HydraSum -- Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models}, </br>
+                   author={Tanya Goyal and Nazneen Fatema Rajani and Wenhao Liu and Wojciech Kryściński}, </br>
+                   year={2021}, </br>
+                   journal={arXiv preprint arXiv:2110.04400},}
+
 - title: Annotating and Modeling Fine-grained Factuality in Summarization 
   authors: Tanya Goyal and Greg Durrett. 
   venue: NAACL 2021.
