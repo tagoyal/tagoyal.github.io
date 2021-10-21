@@ -4,7 +4,7 @@
   venue: preprint 2021.
   url: https://arxiv.org/abs/2110.08370
   bibtex: goyal2021training
-  bibtexcontent:  \@article{goyal2021training,  </br>
+  bibtexcontent:  article{goyal2021training,  </br>
                   title={Training Dynamics for Text Summarization Models},  </br>
                   author={Tanya Goyal and Jiacheng Xu and Junyi Jessy Li and Greg Durrett}, </br>
                   year={2021}, </br>
@@ -16,7 +16,7 @@
   url: https://arxiv.org/abs/2110.04400
   code: <a href="https://github.com/salesforce/hydra-sum">Code</a> &#9679
   bibtex: goyalnaacl2021
-  bibtexcontent:  \@article{goyal2021hydrasum, </br>
+  bibtexcontent:  article{goyal2021hydrasum, </br>
                    title={HydraSum -- Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models}, </br>
                    author={Tanya Goyal and Nazneen Fatema Rajani and Wenhao Liu and Wojciech Kryściński}, </br>
                    year={2021}, </br>
