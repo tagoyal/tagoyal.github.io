@@ -51,7 +51,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: ACL 2020.
   url: https://www.aclweb.org/anthology/2020.acl-main.22.pdf
-  code: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> &#9679 <a href="acl2020_presentation.pdf" Slides </a> &#9679
+  code: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> &#9679 <a href="acl2020_presentation.pdf"> Slides </a> &#9679
   bibtex: goyalacl2020
   bibtexcontent:  inproceedings{Goyal-Durrett:2020:Syntaxparaphrase, </br>
                   title = {Neural Syntactic Preordering for Controlled Paraphrase Generation}, </br>
