@@ -1,15 +1,4 @@
-# Projects
-- title: Training Dynamics for Text Summarization Models 
-  authors: Tanya Goyal, Jiacheng Xu, Junyi Jessy Li, Greg Durrett.
-  venue: preprint 2021.
-  url: https://arxiv.org/abs/2110.08370
-  bibtex: goyal2021training
-  bibtexcontent:  article{goyal2021training,  </br>
-                  title={Training Dynamics for Text Summarization Models},  </br>
-                  author={Tanya Goyal and Jiacheng Xu and Junyi Jessy Li and Greg Durrett}, </br>
-                  year={2021}, </br>
-                  journal={arXiv preprint arXiv:2110.08370},} </br>
- 
+# Projects 
 - title: HydraSum - Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models
   authors: Tanya Goyal, Nazneen Fatema Rajani, Wenhao Liu, Wojciech Kryściński.
   venue: preprint 2021.
@@ -21,6 +10,17 @@
                    author={Tanya Goyal and Nazneen Fatema Rajani and Wenhao Liu and Wojciech Kryściński}, </br>
                    year={2021}, </br>
                    journal={arXiv preprint arXiv:2110.04400},}
+
+- title: Training Dynamics for Text Summarization Models 
+  authors: Tanya Goyal, Jiacheng Xu, Junyi Jessy Li, Greg Durrett.
+  venue: Findings of ACL 2022.
+  url: https://arxiv.org/abs/2110.08370
+  bibtex: goyal2021training
+  bibtexcontent:  inproceedings{goyal2021training,  </br>
+                  title={Training Dynamics for Text Summarization Models},  </br>
+                  author={Tanya Goyal and Jiacheng Xu and Junyi Jessy Li and Greg Durrett}, </br>
+                  year={2022}, </br>
+                  journal={Findings of ACL},} </br>
 
 - title: Annotating and Modeling Fine-grained Factuality in Summarization 
   authors: Tanya Goyal and Greg Durrett. 
@@ -51,7 +51,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: ACL 2020.
   url: https://www.aclweb.org/anthology/2020.acl-main.22.pdf
-  code: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> &#9679
+  code: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> &#9679 <a href="acl2020_presentation.pdf" Slides </a> &#9679
   bibtex: goyalacl2020
   bibtexcontent:  inproceedings{Goyal-Durrett:2020:Syntaxparaphrase, </br>
                   title = {Neural Syntactic Preordering for Controlled Paraphrase Generation}, </br>
@@ -63,7 +63,7 @@
   authors: Tanya Goyal and Greg Durrett. 
   venue: ACL 2019.
   url: https://www.aclweb.org/anthology/P19-1433.pdf
-  code: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> &#9679
+  code: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> &#9679 <a href="acl2019_presentation.pdf"> Slides </a> &#9679
   bibtex: goyalacl2019
   bibtexcontent: inproceedings{Goyal-Durrett:2019:Time, </br>
                   title = {Embedding time expressions for deep temporal ordering models}, </br>
