@@ -5,13 +5,12 @@
   url: https://arxiv.org/abs/2205.09641
   code: <a href="https://coherence-annotation-summaries.herokuapp.com/">Data Explorer</a> &#9679
   bibtex: goyalsnac2022
-  bibtexcontent:  @article{goyal2022snac, <br>
+  bibtexcontent:  article{goyal2022snac, <br>
                     title={SNaC - Coherence Error Detection for Narrative Summarization}, <br>
                     author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
                     year={2022}, <br>
-                    journal={arXiv preprint arXiv:2205.09641} <br>
-                    } 
-
+                    journal={arXiv preprint arXiv:2205.09641}, <br>
+                    }
 
 - title: HydraSum - Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models
   authors: <b>Tanya Goyal</b>, Nazneen Fatema Rajani, Wenhao Liu, Wojciech Kryściński.
