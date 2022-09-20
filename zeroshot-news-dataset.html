@@ -1,0 +1,70 @@
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Zero-shot summary explorer</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="zero-shot-explorer/summary_explorer.js"></script>
+
+    <link rel="stylesheet" href="zero-shot-explorer/summary_explorer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="dataset-current" hidden="true">{{dataset_current}}</div>
+    <div id="example_id" hidden="true">{{example_id}}</div>
+    
+    <nav id="navbar" class="shadow-sm navbar navbar-light bg-light">
+        <div id="navbar-content" class="container">
+          <a class="navbar-brand" href="#">Zero-shot news summarization with GPT-3</a>
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="./" class="nav-link" aria-current="page">Standard Datasets</a></li>
+            <li class="nav-item"><a href="./zero-shot-human.html" class="nav-link">New articles w/ human annotations</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+    <br><br><br>
+
+    <div class="description">
+    <h4>Title</h4>
+    Select a dataset to view generated summaries. Click on <a>Link</a> to download the entire dataset. 
+    </div>
+    
+    <div class="container">
+        <div class="outline intro-box">
+            <div class="dropdown dropdown-menu-model" tabindex="1" id="dataset-dropdown">
+                <span>Choose Dataset</span>
+                
+                <ul style="display: none; background: white;" class="dropdown-menu">
+                    <li dataset-name="cnn">CNN</li>
+                    <li dataset-name="dm">DailyMail</li>
+                    <li dataset-name="xsum">XSum</li>
+                    <li dataset-name="newsroom">Newsroom</li>
+                </ul>    
+
+            </div>
+            <div><button id="random-sample" class="button-custom">Randomly sample</button></div>
+
+            <div class="content-box">
+                <h5>Input Article</h5> 
+                <div id="article-display-box">{{article}}</div>
+            </div>
+        </div>
+        <div class="outline summary-box" style="margin-top: 120px;">
+            <h5> Generated Summaries</h5>
+
+            <div id="pegasus-summary">{{pegasus}} <br><br></div> 
+            <div id="brio-summary">{{brio}} <br><br></div>
+            <div id="t0-summary">{{t0}} <br><br></div>
+            <div id="gpt3-summary">{{gpt3}} <br><br></div>
+            
+        </div>
+
+    </div>
+    </div>
+
+</body>
+</html>
+
