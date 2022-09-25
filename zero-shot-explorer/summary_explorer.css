@@ -1,5 +1,5 @@
 html * {
-    font-family: sans-serif;
+    font-family: verdana;
 }
 
 * {
@@ -22,19 +22,20 @@ a {
 	text-decoration: none;
 }
 
+
 .container {
 	display: flex;
 }
 
 .summary-box {
-    width: 40%;
+    width: 50%;
 }
 
 .outline {
 	text-align: left;
 	margin-left: 50px;
 	margin-right: 50px;
-	font-size: 18px;
+	font-size: 12px;
 	flex-grow: 1;
 }
 
@@ -47,12 +48,17 @@ a {
 }
 
 .intro-box {
-	width: 70%;
+	width: 80%;
 }
 
 #article-display-box {
-	height: 800px;
+	height: 400px;
 	overflow: scroll;
+}
+
+#article-display-box-human {
+   height: 400px;
+   overflow: scroll;
 }
 
 .content-box {
@@ -64,6 +70,15 @@ a {
 
 
 #dataset-dropdown {
+   width    : 200px;
+   padding: 5px;
+   margin-top: 20px;
+   border-radius   : 0 1px 2px 2px;
+   box-shadow      : 0 1px 2px rgb(204, 204, 204);
+}
+
+
+#dataset-dropdown-human {
    width    : 200px;
    padding: 5px;
    margin-top: 20px;
@@ -161,7 +176,7 @@ a {
 
 .button-custom:hover {
   border: 1px solid #0099cc;
-  background-color: #00aacc;
+  background-color: #0F3460;
   color: #ffffff;
 }
 
@@ -170,4 +185,11 @@ a {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
+}
+
+
+.button-hover {
+  border: 1px solid #0099cc;
+  background-color: #0F3460;
+  color: #ffffff;
 }
