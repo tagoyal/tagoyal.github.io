@@ -73,7 +73,7 @@ $(document).on("click", '.button-sample', function (){
 
 $(document).on("click", '#random-sample', function (e){
   dataset_name = document.getElementById("dataset-current").innerHTML;
-  let id = Math.floor(Math.random() * 10);
+  let id = Math.floor(Math.random() * 20);
   updateArticleSummary(dataset_name, id);
 });
 
