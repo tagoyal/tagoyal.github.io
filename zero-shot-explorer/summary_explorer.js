@@ -87,6 +87,7 @@ var url = "https://tagoyal.github.io/zero-shot-explorer/" + dataset_name + "_hum
 
     let best_summary = result[id]['annotators'][annotatorid]['best_summary'] 
     let worst_summary = result[id]['annotators'][annotatorid]['worst_summary'] 
+    console.log(best_summary[0])
 
     var best_summary_container = $("#best-summary");
     var worst_summary_container = $("#worst-summary");
@@ -115,9 +116,9 @@ function updateArticleSummaryHuman(dataset_name, id) {
     dataType: "json"
   }).done(function(result) {
     let article = result[id]['article'];
-    let brio = result[id]['brio'];
-    let t0 = result[id]['t0'];
-    let gpt3 = result[id]['gpt3'];
+    let brio = result[id]['brio']['text'];
+    let t0 = result[id]['t0']['text'];
+    let gpt3 = result[id]['gpt3']['text'];
 
     var articlecontainer = $("#article-display-box-human");
     var briocontainer = $("#brio-summary-human");
