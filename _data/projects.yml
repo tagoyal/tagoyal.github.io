@@ -1,4 +1,17 @@
 # Projects 
+- title: News Summarization and Evaluation in the Era of GPT-3
+  authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
+  venue: preprint 2022.
+  url: https://arxiv.org/abs/2209.12356
+  code: <a href="https://tagoyal.github.io/zeroshot-news-annotations.html">Data Explorer</a> &#9679
+  bibtex: goyalzeroshotnews2022
+  bibtexcontent:  article{goyal2022snac, <br>
+                    title={News Summarization and Evaluation in the Era of GPT-3}, <br>
+                    author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
+                    year={2022}, <br>
+                    journal={arXiv preprint arXiv:2209.12356}, <br>
+                    }
+
 - title: SNaC - Coherence Error Detection for Narrative Summarization
   authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
   venue: preprint 2022.
