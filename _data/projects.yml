@@ -25,7 +25,7 @@
                    year={2022}, </br>
                    journal={Proceedings of EMNLP}, <br>
                  }
-                 
+
 
 - title: SNaC - Coherence Error Detection for Narrative Summarization
   authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
@@ -43,6 +43,8 @@
 - title: FALTE - A Toolkit for Fine-grained Annotation for Long Text Evaluation
   authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
   venue: EMNLP-DEMO 2022.
+  url: 
+  code: <a href="https://github.com/tagoyal/falte-tool">Code</a> &#9679
   bibtex: goyalfalte2022
   bibtexcontent:  article{goyal2022falte, <br>
                     title={FALTE - A Toolkit for Fine-grained Annotation for Long Text Evaluation}, <br>
