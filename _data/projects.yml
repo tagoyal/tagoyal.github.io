@@ -14,7 +14,7 @@
 
 - title: SNaC - Coherence Error Detection for Narrative Summarization
   authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
-  venue: preprint 2022.
+  venue: EMNLP 2022.
   url: https://arxiv.org/abs/2205.09641
   code: <a href="https://coherence-annotation-summaries.herokuapp.com/">Data Explorer</a> &#9679
   bibtex: goyalsnac2022
@@ -22,20 +22,33 @@
                     title={SNaC - Coherence Error Detection for Narrative Summarization}, <br>
                     author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
                     year={2022}, <br>
-                    journal={arXiv preprint arXiv:2205.09641}, <br>
+                    journal={Proceedings of EMNLP}, <br>
                     }
 
 - title: HydraSum - Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models
   authors: <b>Tanya Goyal</b>, Nazneen Fatema Rajani, Wenhao Liu, Wojciech Kryściński.
-  venue: preprint 2021.
+  venue: EMNLP 2021.
   url: https://arxiv.org/abs/2110.04400
   code: <a href="https://github.com/salesforce/hydra-sum">Code</a> &#9679
   bibtex: goyal2021hydrasum
   bibtexcontent:  article{goyal2021hydrasum, </br>
                    title={HydraSum -- Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models}, </br>
                    author={Tanya Goyal and Nazneen Fatema Rajani and Wenhao Liu and Wojciech Kryściński}, </br>
-                   year={2021}, </br>
-                   journal={arXiv preprint arXiv:2110.04400},}
+                   year={2022}, </br>
+                   journal={Proceedings of EMNLP},}
+
+
+- title: FALTE - A Toolkit for Fine-grained Annotation for Long Text Evaluation
+  authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
+  venue: EMNLP-DEMO 2022.
+  bibtex: goyalfalte2022
+  bibtexcontent:  article{goyal2022falte, <br>
+                    title={FALTE - A Toolkit for Fine-grained Annotation for Long Text Evaluation}, <br>
+                    author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
+                    year={2022}, <br>
+                    journal={Demo Conference on Empirical Methods in Natural Language Processing}, <br>
+                    }
+
 
 - title: Training Dynamics for Text Summarization Models 
   authors: <b>Tanya Goyal</b>, Jiacheng Xu, Junyi Jessy Li, Greg Durrett.
