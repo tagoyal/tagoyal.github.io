@@ -35,7 +35,7 @@
                     year={2022}, <br>
                     journal={Demo Conference on Empirical Methods in Natural Language Processing}, <br>
                     }
-                    
+
 
 - title: HydraSum - Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models
   authors: <b>Tanya Goyal</b>, Nazneen Fatema Rajani, Wenhao Liu, Wojciech Kryściński.
@@ -43,7 +43,7 @@
   url: https://arxiv.org/abs/2110.04400
   code: <a href="https://github.com/salesforce/hydra-sum">Code</a> &#9679
   bibtex: goyal2022hydrasum
-  bibtexcontent:  article{goyal2021hydrasum, </br>
+  bibtexcontent:  article{goyal2022hydrasum, </br>
                    title={HydraSum -- Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models}, </br>
                    author={Tanya Goyal and Nazneen Fatema Rajani and Wenhao Liu and Wojciech Kryściński}, </br>
                    year={2022}, </br>
