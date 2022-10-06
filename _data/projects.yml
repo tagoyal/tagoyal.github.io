@@ -43,14 +43,27 @@
 - title: FALTE - A Toolkit for Fine-grained Annotation for Long Text Evaluation
   authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
   venue: EMNLP-DEMO 2022.
-  url: 
+  url: https://tagoyal.github.io/
   code: <a href="https://github.com/tagoyal/falte-tool">Code</a> &#9679
-  bibtex: goyalfalte2022
+  bibtex: goyal2022falte
   bibtexcontent:  article{goyal2022falte, <br>
                     title={FALTE - A Toolkit for Fine-grained Annotation for Long Text Evaluation}, <br>
                     author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
                     year={2022}, <br>
                     journal={Demo Conference on Empirical Methods in Natural Language Processing}, <br>
+                    }
+
+
+- title:  Understanding Factual Errors in Summarization- Errors, Summarizers, Datasets, Error Detectors 
+  authors: Liyan Tang, <b>Tanya Goyal</b>, Alexander R. Fabbri, Philippe Laban, Jiacheng Xu, Semih Yahvuz, Wojciech Kryściński, Justin F. Rousseau, and Greg Durrett.
+  venue: preprint 2022.
+  url: https://arxiv.org/pdf/2205.12854.pdf
+  bibtex: tang2022factuality
+  bibtexcontent:  article{tang2022factuality, <br>
+                    title={Understanding Factual Errors in Summarization- Errors, Summarizers, Datasets, Error Detectors}, <br>
+                    author={Liyan Tang, Tanya Goyal, Alexander R. Fabbri, Philippe Laban, Jiacheng Xu, Semih Yahvuz, Wojciech Kryściński, Justin F. Rousseau, and Greg Durrett}, <br>
+                    year={2022}, <br>
+                    journal={arXiv preprint arXiv:2205.12854}, <br>
                     }
 
 
