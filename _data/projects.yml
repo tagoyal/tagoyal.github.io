@@ -27,7 +27,7 @@
 
 - title: HydraSum - Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models
   authors: <b>Tanya Goyal</b>, Nazneen Fatema Rajani, Wenhao Liu, Wojciech Kryściński.
-  venue: EMNLP 2021.
+  venue: EMNLP 2022.
   url: https://arxiv.org/abs/2110.04400
   code: <a href="https://github.com/salesforce/hydra-sum">Code</a> &#9679
   bibtex: goyal2021hydrasum
@@ -35,7 +35,8 @@
                    title={HydraSum -- Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models}, </br>
                    author={Tanya Goyal and Nazneen Fatema Rajani and Wenhao Liu and Wojciech Kryściński}, </br>
                    year={2022}, </br>
-                   journal={Proceedings of EMNLP},}
+                   journal={Proceedings of EMNLP}, <br>
+                 }
 
 
 - title: FALTE - A Toolkit for Fine-grained Annotation for Long Text Evaluation
