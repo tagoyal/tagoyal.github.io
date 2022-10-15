@@ -1,28 +1,15 @@
 # Projects 
-- title: News Summarization and Evaluation in the Era of GPT-3
+- title: (preprint) News Summarization and Evaluation in the Era of GPT-3
   authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
   venue: preprint 2022.
   url: https://arxiv.org/abs/2209.12356
   code: <a href="https://tagoyal.github.io/zeroshot-news-annotations.html">Data Explorer</a> &#9679
   bibtex: goyalzeroshotnews2022
   bibtexcontent:  article{goyal2022snac, <br>
-                    title={News Summarization and Evaluation in the Era of GPT-3}, <br>
-                    author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
-                    year={2022}, <br>
-                    journal={arXiv preprint arXiv:2209.12356}, <br>
-                    }
-
-
-- title: Shortcomings of Question Answering Based Factuality Frameworks for Error Localization
-  authors: Ryo Kamoi, <b>Tanya Goyal</b>, Greg Durrett.
-  venue: preprint 2022.
-  url: https://arxiv.org/pdf/2210.06748
-  bibtex: kamoishortcomings2022
-  bibtexcontent:  article{kamoishortcomings2022, <br>
-                    title={Shortcomings of Question Answering Based Factuality Frameworks for Error Localization}, <br>
-                    author={Ryo Kamoi, Tanya Goyal, Greg Durrett}, <br>
-                    year={2022}, <br>
-                    journal={arXiv preprint arXiv:2210.06748}, <br>
+                    &nbsp; &nbsp; title={News Summarization and Evaluation in the Era of GPT-3}, <br>
+                    &nbsp; &nbsp; author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
+                    &nbsp; &nbsp; year={2022}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2209.12356}, <br>
                     }
 
 
@@ -66,8 +53,21 @@
                     journal={Demo Conference on Empirical Methods in Natural Language Processing}, <br>
                     }
 
+- title: (preprint) Shortcomings of Question Answering Based Factuality Frameworks for Error Localization
+  authors: Ryo Kamoi, <b>Tanya Goyal</b>, Greg Durrett.
+  venue: preprint 2022.
+  url: https://arxiv.org/pdf/2210.06748
+  bibtex: kamoishortcomings2022
+  bibtexcontent:  article{kamoishortcomings2022, <br>
+                    title={Shortcomings of Question Answering Based Factuality Frameworks for Error Localization}, <br>
+                    author={Ryo Kamoi, Tanya Goyal, Greg Durrett}, <br>
+                    year={2022}, <br>
+                    journal={arXiv preprint arXiv:2210.06748}, <br>
+                    }
 
-- title:  Understanding Factual Errors in Summarization- Errors, Summarizers, Datasets, Error Detectors 
+
+
+- title:  (preprint) Understanding Factual Errors in Summarization- Errors, Summarizers, Datasets, Error Detectors 
   authors: Liyan Tang, <b>Tanya Goyal</b>, Alexander R. Fabbri, Philippe Laban, Jiacheng Xu, Semih Yahvuz, Wojciech Kryściński, Justin F. Rousseau, and Greg Durrett.
   venue: preprint 2022.
   url: https://arxiv.org/pdf/2205.12854.pdf
