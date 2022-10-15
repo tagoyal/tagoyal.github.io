@@ -13,6 +13,19 @@
                     }
 
 
+- title: Shortcomings of Question Answering Based Factuality Frameworks for Error Localization
+  authors: Ryo Kamoi, <b>Tanya Goyal</b>, Greg Durrett.
+  venue: preprint 2022.
+  url: https://arxiv.org/pdf/2210.06748
+  bibtex: kamoishortcomings2022
+  bibtexcontent:  article{kamoishortcomings2022, <br>
+                    title={Shortcomings of Question Answering Based Factuality Frameworks for Error Localization}, <br>
+                    author={Ryo Kamoi, Tanya Goyal, Greg Durrett}, <br>
+                    year={2022}, <br>
+                    journal={arXiv preprint arXiv:2210.06748}, <br>
+                    }
+
+
 - title: HydraSum - Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models
   authors: <b>Tanya Goyal</b>, Nazneen Fatema Rajani, Wenhao Liu, Wojciech Kryściński.
   venue: EMNLP 2022.
