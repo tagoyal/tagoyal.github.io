@@ -1,3 +1,17 @@
+- title: SNaC - Coherence Error Detection for Narrative Summarization
+  authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
+  venue: EMNLP 2022.
+  url: https://arxiv.org/abs/2205.09641
+  code: <a href="https://coherence-annotation-summaries.herokuapp.com/">Data Explorer</a> &#9679
+  bibtex: goyal2022snac
+  bibtexcontent:  article{goyal2022snac, <br>
+                    &nbsp; &nbsp; title={SNaC - Coherence Error Detection for Narrative Summarization}, <br>
+                    &nbsp; &nbsp; author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
+                    &nbsp; &nbsp; year={2022}, <br>
+                    &nbsp; &nbsp; journal={Proceedings of EMNLP}, <br>
+                    }
+
+
 - title: HydraSum - Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models
   authors: <b>Tanya Goyal</b>, Nazneen Fatema Rajani, Wenhao Liu, Wojciech Kryściński.
   venue: EMNLP 2022.
@@ -11,19 +25,6 @@
                    &nbsp; &nbsp; journal={Proceedings of EMNLP}, <br>
                  }
 
-
-- title: SNaC - Coherence Error Detection for Narrative Summarization
-  authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
-  venue: EMNLP 2022.
-  url: https://arxiv.org/abs/2205.09641
-  code: <a href="https://coherence-annotation-summaries.herokuapp.com/">Data Explorer</a> &#9679
-  bibtex: goyal2022snac
-  bibtexcontent:  article{goyal2022snac, <br>
-                    &nbsp; &nbsp; title={SNaC - Coherence Error Detection for Narrative Summarization}, <br>
-                    &nbsp; &nbsp; author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
-                    &nbsp; &nbsp; year={2022}, <br>
-                    &nbsp; &nbsp; journal={Proceedings of EMNLP}, <br>
-                    }
 
 - title: FALTE - A Toolkit for Fine-grained Annotation for Long Text Evaluation
   authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.

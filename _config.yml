@@ -27,7 +27,10 @@ resume_header_intro: "<p>
 Hi! I am a final year CS Ph.D. student at the University of Texas at Austin. 
 I am advised by <a href=\"https://www.cs.utexas.edu/~gdurrett/\" >Greg Durrett</a>, and part of the <a href=\"http://taur.cs.utexas.edu/\" >TAUR lab</a> at UT. My research is primarily focused on deep models for text generation. 
 I think about controllability and faithfulness of generation models. </p>
-<p>Before grad school, I worked at the Adobe Research Lab in Bangalore, India. Even before that, I learnt how to Math at the Indian Institute of Technology, Guwahati (Maths and Computing, B.Tech 2011-2015).
+<p>Before grad school, I worked at the Adobe Research Lab in Bangalore, India. Even before that, I learnt how to Math at the Indian Institute of Technology, Guwahati (Maths and Computing, B.Tech 2011-2015). </p>
+
+<p> </p>
+<a href=\"TanyaGoyal_CV.pdf\"> CV </a> | <a href=\"TanyaGoyal_Research.pdf\"> Research Statement </a> | <a href=\"TanyaGoyal_Teaching.pdf\"> Teaching Statement </a>  | <a href=\"TanyaGoyal_Diversity.pdf\"> DEI </a> 
 "
 
 # use "yes" to display the email contact button,
@@ -40,6 +43,7 @@ resume_looking_for_work:        ""
 # comment out to hide
 resume_section_education:       false
 resume_section_projects:        true
+resume_section_preprints:       true
 resume_section_skills:          false
 resume_section_recognition:     false
 resume_section_links:           false
