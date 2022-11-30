@@ -1,0 +1,42 @@
+# Projects 
+- title: News Summarization and Evaluation in the Era of GPT-3
+  authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
+  venue: preprint 2022.
+  url: https://arxiv.org/abs/2209.12356
+  code: <a href="https://tagoyal.github.io/zeroshot-news-annotations.html">Data Explorer</a> &#9679
+  bibtex: goyalzeroshotnews2022
+  bibtexcontent:  article{goyalzeroshotnews2022, <br>
+                    &nbsp; &nbsp; title={News Summarization and Evaluation in the Era of GPT-3}, <br>
+                    &nbsp; &nbsp; author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
+                    &nbsp; &nbsp; year={2022}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2209.12356}, <br>
+                    }
+
+
+- title: Shortcomings of Question Answering Based Factuality Frameworks for Error Localization
+  authors: Ryo Kamoi, <b>Tanya Goyal</b>, Greg Durrett.
+  venue: preprint 2022.
+  url: https://arxiv.org/pdf/2210.06748
+  bibtex: kamoishortcomings2022
+  bibtexcontent:  article{kamoishortcomings2022, <br>
+                    &nbsp; &nbsp; title={Shortcomings of Question Answering Based Factuality Frameworks for Error Localization}, <br>
+                    &nbsp; &nbsp; author={Ryo Kamoi, Tanya Goyal, Greg Durrett}, <br>
+                    &nbsp; &nbsp; year={2022}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2210.06748}, <br>
+                    }
+
+
+
+- title:  Understanding Factual Errors in Summarization- Errors, Summarizers, Datasets, Error Detectors 
+  authors: Liyan Tang, <b>Tanya Goyal</b>, Alexander R. Fabbri, Philippe Laban, Jiacheng Xu, Semih Yahvuz, Wojciech Kryściński, Justin F. Rousseau, and Greg Durrett.
+  venue: preprint 2022.
+  url: https://arxiv.org/pdf/2205.12854.pdf
+  bibtex: tang2022factuality
+  bibtexcontent:  article{tang2022factuality, <br>
+                    &nbsp; &nbsp; title={Understanding Factual Errors in Summarization- Errors, Summarizers, Datasets, Error Detectors}, <br>
+                    &nbsp; &nbsp; author={Liyan Tang, Tanya Goyal, Alexander R. Fabbri, Philippe Laban, Jiacheng Xu, Semih Yahvuz, Wojciech Kryściński, Justin F. Rousseau, and Greg Durrett}, <br>
+                    &nbsp; &nbsp; year={2022}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2205.12854}, <br>
+                    }
+
+
