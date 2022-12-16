@@ -45,7 +45,7 @@
     <div class="description" id="human">
 	    <h4 style="color:0F3460">Browse Human Annotations for news articles from 2022</h4>
 	    This contains 100 articles from CNN and BBC each, scraped between March 1, 2022 and June 31, 2022. For each article,  summaries are generated using three systems:  <br>
-	    &nbsp; &nbsp; (1) OpenAI's text-davinci-002 <br>
+	    &nbsp; &nbsp; (1) OpenAI's text-davinci-002 &#42;&#42; <br>
 	    &nbsp; &nbsp; (2) fine-tuned BRIO (<a href="https://arxiv.org/abs/2203.16804">link</a>) <br>
 	    &nbsp; &nbsp; (3) T0 (<a href="https://arxiv.org/abs/2110.08207">link</a>) <br>
 
@@ -94,6 +94,8 @@
 	        </div>
 
 	    </div>
+
+
     </div>
 
     <br><br><br><br>
@@ -142,6 +144,8 @@
 	        </div>
 
 	    </div>
+
+	&#42;&#42; If the text-davinci-002 generates a numbered list, we post-process it and remove the numbering to align with the outputs of other summarization systems. This is similar to how the CNN/DM dataset was constructed from a list of bullet points.
 	</div>
 	<br><br>
 	<div class="description">
