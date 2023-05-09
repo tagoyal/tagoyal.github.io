@@ -3,8 +3,7 @@
   venue: preprint 2022.
   url: https://arxiv.org/pdf/2205.12854.pdf
   bibtex: tang2022factuality
-  bibtexcontent:  >
-    @inproceedings{tang2022factuality, <br>
+  bibtexcontent: inproceedings{tang2022factuality, <br>
                     &nbsp; &nbsp; title={Understanding Factual Errors in Summarization- Errors, Summarizers, Datasets, Error Detectors}, <br>
                     &nbsp; &nbsp; author={Liyan Tang, Tanya Goyal, Alexander R. Fabbri, Philippe Laban, Jiacheng Xu, Semih Yahvuz, Wojciech Kryściński, Justin F. Rousseau, and Greg Durrett}, <br>
                     &nbsp; &nbsp; year={2023}, <br>
@@ -17,8 +16,7 @@
   venue: EACL 2023.
   url: https://arxiv.org/pdf/2210.06748
   bibtex: kamoishortcomings2022
-  bibtexcontent:  >
-    @inproceedings{kamoishortcomings2022, <br>
+  bibtexcontent:  inproceedings{kamoishortcomings2022, <br>
                     &nbsp; &nbsp; title={Shortcomings of Question Answering Based Factuality Frameworks for Error Localization}, <br>
                     &nbsp; &nbsp; author={Ryo Kamoi, Tanya Goyal, Greg Durrett}, <br>
                     &nbsp; &nbsp; year={2023}, <br>
@@ -32,8 +30,7 @@
   url: https://arxiv.org/abs/2205.09641
   code: <a href="https://coherence-annotation-summaries.herokuapp.com/">Data Explorer</a> &#9679
   bibtex: goyal2022snac
-  bibtexcontent:  >
-    @inproceedings{goyal2022snac, <br>
+  bibtexcontent:  inproceedings{goyal2022snac, <br>
                     &nbsp; &nbsp; title={SNaC - Coherence Error Detection for Narrative Summarization}, <br>
                     &nbsp; &nbsp; author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
                     &nbsp; &nbsp; year={2022}, <br>
@@ -48,8 +45,7 @@
   url: https://arxiv.org/abs/2110.04400
   code: <a href="https://github.com/salesforce/hydra-sum">Code</a> &#9679
   bibtex: goyal2022hydrasum
-  bibtexcontent:  >
-    @inproceedings{goyal2022hydrasum, </br>
+  bibtexcontent:  inproceedings{goyal2022hydrasum, </br>
                    &nbsp; &nbsp; title={HydraSum -- Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models}, </br>
                    &nbsp; &nbsp; author={Tanya Goyal and Nazneen Fatema Rajani and Wenhao Liu and Wojciech Kryściński}, </br>
                    &nbsp; &nbsp; year={2022}, </br>
@@ -63,8 +59,7 @@
   url: https://tagoyal.github.io/
   code: <a href="https://github.com/tagoyal/falte-tool">Code</a> &#9679
   bibtex: goyal2022falte
-  bibtexcontent:  >
-    @inproceedings{goyal2022falte, <br>
+  bibtexcontent:  inproceedings{goyal2022falte, <br>
                     &nbsp; &nbsp; title={FALTE - A Toolkit for Fine-grained Annotation for Long Text Evaluation}, <br>
                     &nbsp; &nbsp; author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
                     &nbsp; &nbsp; year={2022}, <br>
@@ -77,8 +72,7 @@
   venue: Findings of ACL 2022.
   url: https://arxiv.org/abs/2110.08370
   bibtex: goyal2021training
-  bibtexcontent:  >
-    @inproceedings{goyal2021training,  </br>
+  bibtexcontent:  inproceedings{goyal2021training,  </br>
                   &nbsp; &nbsp; title={Training Dynamics for Text Summarization Models},  </br>
                   &nbsp; &nbsp; author={Tanya Goyal and Jiacheng Xu and Junyi Jessy Li and Greg Durrett}, </br>
                   &nbsp; &nbsp; year={2022}, </br>
@@ -91,8 +85,7 @@
   url: https://arxiv.org/pdf/2104.04302.pdf
   code: <a href="https://github.com/tagoyal/factuality-datasets">Code</a> &#9679 <a href='naacl2021_presentation.pdf'> Slides </a> &#9679 <a href='naacl2021_poster.pdf'> Poster </a> &#9679
   bibtex: goyalnaacl2021
-  bibtexcontent:  >
-    @inproceedings{goyal2020annotating, </br>
+  bibtexcontent:  inproceedings{goyal2020annotating, </br>
                   &nbsp; &nbsp; title = {Annotating and Modeling Fine-grained Factuality in Summarization}, </br>
                   &nbsp; &nbsp; author = {Tanya Goyal and Greg Durrett}, </br>
                   &nbsp; &nbsp; booktitle = {Proceedings of NAACL}, </br>
@@ -105,8 +98,7 @@
   url: https://www.aclweb.org/anthology/2020.findings-emnlp.322.pdf
   code: <a href="https://github.com/tagoyal/dae-factuality">Code</a> &#9679  <a href="emnlp2020_poster.pdf"> Poster </a> &#9679
   bibtex: goyalemnlpf2020
-  bibtexcontent:  >
-    @inproceedings{goyal2020evaluating, </br>
+  bibtexcontent:  inproceedings{goyal2020evaluating, </br>
                   &nbsp; &nbsp; title = {Evaluating Factuality in Generation with Dependency-level Entailment}, </br>
                   &nbsp; &nbsp; author = {Goyal, Tanya and Durrett, Greg}, </br>
                   &nbsp; &nbsp; booktitle = {Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing :Findings}, </br>
@@ -120,8 +112,7 @@
   url: https://www.aclweb.org/anthology/2020.acl-main.22.pdf
   code: <a href="https://github.com/tagoyal/sow-reap-paraphrasing">Code</a> &#9679 <a href="acl2020_presentation.pdf"> Slides </a> &#9679
   bibtex: goyalacl2020
-  bibtexcontent:  >
-    @inproceedings{Goyal-Durrett:2020:Syntaxparaphrase, </br>
+  bibtexcontent:  inproceedings{Goyal-Durrett:2020:Syntaxparaphrase, </br>
                   &nbsp; &nbsp; title = {Neural Syntactic Preordering for Controlled Paraphrase Generation}, </br>
                   &nbsp; &nbsp; author = {Tanya Goyal and Greg Durrett}, </br>
                   &nbsp; &nbsp; booktitle = {Proceedings of ACL}, </br>
@@ -134,8 +125,7 @@
   url: https://www.aclweb.org/anthology/P19-1433.pdf
   code: <a href="https://github.com/tagoyal/Temporal-event-ordering">Code</a> &#9679 <a href="acl2019_presentation.pdf"> Slides </a> &#9679
   bibtex: goyalacl2019
-  bibtexcontent: >
-    @inproceedings{Goyal-Durrett:2019:Time, </br>
+  bibtexcontent: inproceedings{Goyal-Durrett:2019:Time, </br>
                   &nbsp; &nbsp; title = {Embedding time expressions for deep temporal ordering models}, </br>
                   &nbsp; &nbsp; author = {Tanya Goyal and Greg Durrett}, </br>
                   &nbsp; &nbsp; booktitle = {Proceedings of ACL (short)}, </br>
@@ -147,8 +137,7 @@
   venue: HCOMP 2018.
   url: https://www.aclweb.org/anthology/P19-1433.pdf
   bibtex: goyalhcomp2018
-  bibtexcontent: >
-    @inproceedings{Goyal18-hcomp,  </br>
+  bibtexcontent: inproceedings{Goyal18-hcomp,  </br>
                   &nbsp; &nbsp; title = {{Your Behavior Signals Your Reliability:&nbspModeling Crowd Behavioral Traces to Ensure Quality Relevance Annotations}},  </br>
                   &nbsp; &nbsp; author = {Tanya Goyal and Tyler McDonnell and Mucahid Kutlu and Tamer Elsayed and Matthew Lease},  </br>
                   &nbsp; &nbsp; booktitle = {Proceedings of the 6th AAAI Conference on Human Computation and Crowdsourcing (HCOMP)},  </br>
@@ -160,8 +149,7 @@
   venue: EMNLP 2017.
   url: https://www.aclweb.org/anthology/D17-1295.pdf
   bibtex: goyalemnlp2017
-  bibtexcontent:  >
-    @inproceedings{goyal2017empirical, </br>
+  bibtexcontent:  inproceedings{goyal2017empirical, </br>
                   &nbsp; &nbsp; title={An Empirical Analysis of Edit Importance between Document Versions}, </br>
                   &nbsp; &nbsp; author={Goyal, Tanya and Kelkar, Sachin and Agarwal, Manas and Grover, Jeenu}, </br>
                   &nbsp; &nbsp; booktitle={Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing}, </br>
