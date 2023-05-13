@@ -1,6 +1,6 @@
 - title:  Understanding Factual Errors in Summarization- Errors, Summarizers, Datasets, Error Detectors 
   authors: Liyan Tang, <b>Tanya Goyal</b>, Alexander R. Fabbri, Philippe Laban, Jiacheng Xu, Semih Yahvuz, Wojciech Kryściński, Justin F. Rousseau, and Greg Durrett.
-  venue: preprint 2022.
+  venue: ACL 2023.
   url: https://arxiv.org/pdf/2205.12854.pdf
   bibtex: tang2022factuality
   bibtexcontent: inproceedings{tang2022factuality, <br>
