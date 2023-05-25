@@ -39,7 +39,7 @@
 
 
 - title: >
-    @HydraSum: Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models
+    HydraSum: Disentangling Stylistic Features in Text Summarization using Multi-Decoder Models
   authors: <b>Tanya Goyal</b>, Nazneen Fatema Rajani, Wenhao Liu, Wojciech Kryściński.
   venue: EMNLP 2022.
   url: https://arxiv.org/abs/2110.04400
