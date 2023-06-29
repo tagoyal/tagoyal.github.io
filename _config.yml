@@ -23,11 +23,11 @@ resume_contact_email:           "tanyagoyal@utexas.edu"
 # resume_header_contact_info:     "742 Evergreen Terrace, Springfield • 555-7334 • lisasimpson@youremailaddress.com"
 # display_header_contact_info:    "true"
 
-resume_header_intro: "<p>
+resume_header_intro: "<p></p>
 
-<b>I will start as a Assistant Professor at Cornell CS in July 2024.</b> I will spend a year at the Center for Language and Intelligence at Princeton before that. </p>
+<p><b>I will start as a Assistant Professor at Cornell CS in July 2024.</b> I will spend a year at the Center for Language and Intelligence at Princeton before that. </p>
 
-I successfully defended my PhD in June 2023 at the Computer Science department at UT Austin, advised by <a href=\"https://www.cs.utexas.edu/~gdurrett/\" >Greg Durrett</a>. I was part of the <a href=\"http://taur.cs.utexas.edu/\" >TAUR lab</a> and the wider <a href=\"https://www.nlp.utexas.edu/\">UT NLP group</a>. Before grad school, I worked at the Adobe Research Lab in Bangalore, India. Even before that, I learnt how to Math at the Indian Institute of Technology, Guwahati (Maths and Computing, B.Tech 2011-2015). </p>
+I successfully defended my PhD in June 2023 at the Computer Science department at UT Austin, advised by <a href=\"https://www.cs.utexas.edu/~gdurrett/\" >Greg Durrett</a>. I was part of the <a href=\"http://taur.cs.utexas.edu/\" >TAUR lab</a> and the wider <a href=\"https://www.nlp.utexas.edu/\">UT NLP group</a>. My PhD research focused on building evaluation tools for text generation models, focusing on aspects like factuality and coherence. Before grad school, I worked at the Adobe Research Lab in Bangalore, India. Even before that, I learnt how to Math at the Indian Institute of Technology, Guwahati (Maths and Computing, B.Tech 2011-2015). </p>
 
 <p> </p>
 <a href=\"TanyaGoyal_CV.pdf\"> CV </a> | <a href=\"TanyaGoyal_Research.pdf\"> Research Statement </a>
