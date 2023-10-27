@@ -1,23 +1,37 @@
 # Projects 
+
 - title:  >
-    WICE: Real-World Entailment for Claims in Wikipedia 
-  authors: Ryo Kamoi, <b>Tanya Goyal</b>, Juan Diego Rodriguez, and Greg Durrett 
-  venue: preprint 2023.
-  url: https://arxiv.org/abs/2303.01432
-  code: <a href="https://github.com/ryokamoi/wice">Code</a> &#9679
-  bibtex: kamoiwice2023
-  bibtexcontent:  article{kamoiwice2023, <br>
-                    &nbsp; &nbsp; title={WICE - Real-World Entailment for Claims in Wikipedia}, <br>
-                    &nbsp; &nbsp; author={Ryo Kamoi, Tanya Goyal, Juan Diego Rodriguez, and Greg Durrett}, <br>
+    A Long Way To Go: Investigating Length Correlations in RLHF  
+  authors: Prasann Singhal, <b>Tanya Goyal</b>, Jiacheng Xu, Greg Durrett 
+  venue: arxiv 2023.
+  url: https://arxiv.org/abs/2310.03716
+  bibtex: singhallongway2023
+  bibtexcontent:  article{singhallongway2023, <br>
+                    &nbsp; &nbsp; title={A Long Way To Go- Investigating Length Correlations in RLHF  }, <br>
+                    &nbsp; &nbsp; author={Prasann Singhal, Tanya Goyal, Jiacheng Xu, Greg Durrett }, <br>
                     &nbsp; &nbsp; year={2023}, <br>
-                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2303.01432}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2310.03716}, <br>
+                    }
+
+- title:  >
+    BooookScore: A systematic exploration of book-length summarization in the era of LLMs 
+  authors: Yapei Chang, Kyle Lo, <b>Tanya Goyal</b>, and Mohit Iyyer 
+  venue: arxiv 2023.
+  url: https://arxiv.org/abs/2310.00785
+  code: <a href="https://github.com/lilakk/BooookScore">Code</a> &#9679
+  bibtex: changbooookscore2023
+  bibtexcontent:  article{changbooookscore2023, <br>
+                    &nbsp; &nbsp; title={BooookScore - A systematic exploration of book-length summarization in the era of LLMs}, <br>
+                    &nbsp; &nbsp; author={Yapei Chang, Kyle Lo, Tanya Goyal, and Mohit Iyyer}, <br>
+                    &nbsp; &nbsp; year={2023}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2310.00785}, <br>
                     }
 
 
 
 - title: News Summarization and Evaluation in the Era of GPT-3
   authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
-  venue: preprint 2022.
+  venue: arxiv 2022.
   url: https://arxiv.org/abs/2209.12356
   code: <a href="https://tagoyal.github.io/zeroshot-news-annotations.html">Data Explorer</a> &#9679
   bibtex: goyalzeroshotnews2022

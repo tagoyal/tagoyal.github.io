@@ -1,3 +1,18 @@
+# Projects 
+- title:  >
+    WICE: Real-World Entailment for Claims in Wikipedia 
+  authors: Ryo Kamoi, <b>Tanya Goyal</b>, Juan Diego Rodriguez, and Greg Durrett 
+  venue: EMNLP 2023.
+  url: https://arxiv.org/abs/2303.01432
+  code: <a href="https://github.com/ryokamoi/wice">Code</a> &#9679
+  bibtex: kamoiwice2023
+  bibtexcontent:  article{kamoiwice2023, <br>
+                    &nbsp; &nbsp; title={WICE - Real-World Entailment for Claims in Wikipedia}, <br>
+                    &nbsp; &nbsp; author={Ryo Kamoi, Tanya Goyal, Juan Diego Rodriguez, and Greg Durrett}, <br>
+                    &nbsp; &nbsp; year={2023}, <br>
+                    &nbsp; &nbsp; journal={EMNLP}, <br>
+                    }
+
 - title:  Understanding Factual Errors in Summarization- Errors, Summarizers, Datasets, Error Detectors 
   authors: Liyan Tang, <b>Tanya Goyal</b>, Alexander R. Fabbri, Philippe Laban, Jiacheng Xu, Semih Yahvuz, Wojciech Kryściński, Justin F. Rousseau, and Greg Durrett.
   venue: ACL 2023.
