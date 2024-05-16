@@ -1,4 +1,74 @@
 # Projects 
+
+- title:  >
+    (arxiv) D2PO: Discriminator-Guided DPO with Response Evaluation Models 
+  authors: Prasann Singhal, Nathan Lambert, Scott Niekum,  <b>Tanya Goyal</b>, and Greg Durrett 
+  venue: arxiv 2024.
+  url: https://arxiv.org/abs/2405.01511
+  code: <a href="https://github.com/PrasannS/d2po">Code</a> &#9679
+  bibtex: Singhal-Et-Al:2024:D2PO
+  bibtexcontent:  article{Singhal-Et-Al:2024:D2PO, <br>
+                    &nbsp; &nbsp; title={D2PO- Discriminator-Guided DPO with Response Evaluation Models}, <br>
+                    &nbsp; &nbsp; author={Prasann Singhal and Nathan Lambert and Scott Niekum and Tanya Goyal and Greg Durrett}, <br>
+                    &nbsp; &nbsp; year={arXiv}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2405.01511}, <br>
+                    }
+
+- title:  >
+    (arxiv) FABLES: Evaluating faithfulness and content selection in book-length summarization
+  authors: Yekyung Kim, Yapei Chang, Marzena Karpinska, Aparna Garimella, Varun Manjunatha, Kyle Lo, <b>Tanya Goyal</b>, Mohit Iyyer 
+  venue: arxiv 2024.
+  url: https://arxiv.org/abs/2404.01261
+  code: <a href="https://github.com/mungg/FABLES">Code</a> &#9679
+  bibtex: fables-2024-kim-et-al
+  bibtexcontent:  article{fables-2024-kim-et-al, <br>
+                    &nbsp; &nbsp; title={FABLES- Evaluating faithfulness and content selection in book-length summarization}, <br>
+                    &nbsp; &nbsp; author={Yekyung Kim and Yapei Chang and Marzena Karpinska and Aparna Garimella and Varun Manjunatha and Kyle Lo and Tanya Goyal and Mohit Iyyer}, <br>
+                    &nbsp; &nbsp; year={2024}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2404.01261}, <br>
+                    }
+
+- title:  >
+    BooookScore: A systematic exploration of book-length summarization in the era of LLMs 
+  authors: Yapei Chang, Kyle Lo, <b>Tanya Goyal</b>, and Mohit Iyyer 
+  venue: ICLR 2024.
+  url: https://arxiv.org/abs/2310.00785
+  code: <a href="https://github.com/lilakk/BooookScore">Code</a> &#9679
+  bibtex: changbooookscore2023
+  bibtexcontent:  article{changbooookscore2023, <br>
+                    &nbsp; &nbsp; title={BooookScore - A systematic exploration of book-length summarization in the era of LLMs}, <br>
+                    &nbsp; &nbsp; author={Yapei Chang, Kyle Lo, Tanya Goyal, and Mohit Iyyer}, <br>
+                    &nbsp; &nbsp; year={2023}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2310.00785}, <br>
+                    }
+
+- title:  >
+    Evaluating Large Language Models at Evaluating Instruction Following 
+  authors: Zhiyuan Zeng, Jiatong Yu, Tianyu Gao, Yu Meng, <b>Tanya Goyal</b>, Danqi Chen
+  venue: ICLR 2024.
+  url: https://arxiv.org/abs/2310.07641
+  code: <a href="https://github.com/princeton-nlp/LLMBar">Code</a> &#9679
+  bibtex: zeng2024llmbar
+  bibtexcontent:  article{zeng2024llmbar, <br>
+                    &nbsp; &nbsp; title={Evaluating Large Language Models at Evaluating Instruction Following}, <br>
+                    &nbsp; &nbsp; author={Zeng, Zhiyuan and Yu, Jiatong and Gao, Tianyu and Meng, Yu and Goyal, Tanya and Chen, Danqi}, <br>
+                    &nbsp; &nbsp; year={2024}, <br>
+                    &nbsp; &nbsp; booktitle = {International Conference on Learning Representations (ICLR)}, <br>
+                    }
+
+- title:  >
+  (arxiv)  A Long Way To Go: Investigating Length Correlations in RLHF  
+  authors: Prasann Singhal, <b>Tanya Goyal</b>, Jiacheng Xu, Greg Durrett 
+  venue: arxiv 2023.
+  url: https://arxiv.org/abs/2310.03716
+  bibtex: singhallongway2023
+  bibtexcontent:  article{singhallongway2023, <br>
+                    &nbsp; &nbsp; title={A Long Way To Go- Investigating Length Correlations in RLHF  }, <br>
+                    &nbsp; &nbsp; author={Prasann Singhal, Tanya Goyal, Jiacheng Xu, Greg Durrett }, <br>
+                    &nbsp; &nbsp; year={2023}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2310.03716}, <br>
+                    }
+
 - title:  >
     WICE: Real-World Entailment for Claims in Wikipedia 
   authors: Ryo Kamoi, <b>Tanya Goyal</b>, Juan Diego Rodriguez, and Greg Durrett 
@@ -11,6 +81,19 @@
                     &nbsp; &nbsp; author={Ryo Kamoi, Tanya Goyal, Juan Diego Rodriguez, and Greg Durrett}, <br>
                     &nbsp; &nbsp; year={2023}, <br>
                     &nbsp; &nbsp; journal={EMNLP}, <br>
+                    }
+
+- title: (arxiv) News Summarization and Evaluation in the Era of GPT-3
+  authors: <b>Tanya Goyal</b>, Junyi Jessy Li, Greg Durrett.
+  venue: arxiv 2022.
+  url: https://arxiv.org/abs/2209.12356
+  code: <a href="https://tagoyal.github.io/zeroshot-news-annotations.html">Data Explorer</a> &#9679
+  bibtex: goyalzeroshotnews2022
+  bibtexcontent:  article{goyalzeroshotnews2022, <br>
+                    &nbsp; &nbsp; title={News Summarization and Evaluation in the Era of GPT-3}, <br>
+                    &nbsp; &nbsp; author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
+                    &nbsp; &nbsp; year={2022}, <br>
+                    &nbsp; &nbsp; journal={arXiv preprint arXiv:2209.12356}, <br>
                     }
 
 - title:  Understanding Factual Errors in Summarization- Errors, Summarizers, Datasets, Error Detectors 
