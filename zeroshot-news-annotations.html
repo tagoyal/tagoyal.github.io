@@ -1,0 +1,169 @@
+<html>
+<meta charset="utf-8">
+<head>
+	<title>News Summarization with GPT-3</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="zero-shot-explorer/summary_explorer.js"></script>
+
+    <link rel="stylesheet" href="zero-shot-explorer/summary_explorer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="dataset-current-human" hidden="true">cnn</div>
+    <div id="dataset-current" hidden="true">cnn</div>
+    <div id="article-current-human" hidden="true">1</div>
+    
+    <nav id="navbar" class="shadow-sm navbar" style="background-color:16213E;">
+        <div id="navbar-content" class="container">
+          <a class="navbar-brand" href="#" style="color: EAE3D2;">News Summarization and Evaluation in the Era of GPT-3</a>
+        </div>
+      </nav>
+    
+    <br>
+    <div class="description">
+    	<h4 style="color:0F3460">About</h4>
+    	Fine-tuning pre-trained models on domain-specific datasets has been the leading paradigm in text summarization research in recent years. These models generate high quality summaries on standard benchmarks but still require sizeable training datasets. The success of prompt-based models, e.g. GPT-3, provides a promising alternative to these by allowing models to learn from natural language task instructions and/or a few demonstrative examples in the context instead of updating model parameters. Here, we systematically study how these two paradigms compare. We show that not only do humans overwhelmingly prefer GPT-3 summaries, but these also do not suffer from common dataset-specific issues such as lead-bias or  poor factuality. Next, we study what this means for evaluation, particularly the role of gold standard test sets. Our experiments show that both reference-based and reference-free automatic metrics, e.g. recently proposed QA- or entailment-based factuality approaches, cannot reliably evaluate zero-shot summaries. <br><br>
+
+    	To support further research, we release: <br>
+    	&nbsp; &nbsp; (a) 1K human preference judgments and rationales comparing different systems for generic- and keyword-based summarization. Click <a href="#human">here</a>. <br>
+    	&nbsp; &nbsp; (b) corpus of 10K generated summaries from fine-tuned and zero-shot models across 4 standard summarization benchmarks. Click <a href="#benchmark">here</a>. 
+
+    <br><br>
+
+    <button class="button-custom" style="border: 1px solid #0099cc; background-color: #0F3460; color: #ffffff; font-size: 18px;"> 
+    	Read the Paper 
+    </button>
+
+	</div>
+
+
+    <br><br><br>
+
+    <div class="description" id="human">
+	    <h4 style="color:0F3460">Browse Human Annotations for news articles from 2022</h4>
+	    This contains 100 articles from CNN and BBC each, scraped between March 1, 2022 and June 31, 2022. For each article,  summaries are generated using three systems:  <br>
+	    &nbsp; &nbsp; (1) OpenAI's text-davinci-002 &#42;&#42; <br>
+	    &nbsp; &nbsp; (2) fine-tuned BRIO (<a href="https://arxiv.org/abs/2203.16804">link</a>) <br>
+	    &nbsp; &nbsp; (3) T0 (<a href="https://arxiv.org/abs/2110.08207">link</a>) <br>
+
+	    <br>
+	    For each article, we obtain best/worst summary judgments from three unique human annotators. Examples from these can be browsed below. Download the full dataset <a href="https://tagoyal.github.io/zero-shot-explorer/human_annotations.zip">here</a>. 
+    
+	    
+	    <div class="container">
+	        <div class="outline intro-box">
+	        	<span style="margin-right: 20px; font-size: 15px;"><b>Choose Dataset</b></span>
+	            <div class="dropdown dropdown-menu-model dropdown-menu-human" id="dataset-dropdown-human" style="display:inline-flex;">
+	            	<span>CNN</span>
+	                <ul style="display: none; background: white;" class="dropdown-menu">
+	                    <li dataset-name="cnn">CNN</li>
+	                    <li dataset-name="bbc">BBC</li>
+	                </ul>    
+
+	            </div> <br>
+	            <div>
+	                <button id="sample-human-1" class="button-custom button-sample-human">Example 1</button>
+	                <button id="sample-human-2" class="button-custom button-sample-human">Example 2</button>
+	                <button id="sample-human-3" class="button-custom button-sample-human">Example 3</button> &nbsp; &nbsp; &nbsp;
+	                <button id="random-sample-human" class="button-custom">Randomly sample</button>
+	            </div>
+
+	            <div class="content-box">
+	                <h5 style="color:0F3460">Input Article</h5> 
+	                <div id="article-display-box-human"></div>
+	            </div>
+	        </div>
+	        <div class="outline summary-box" style="margin-top: 130px;">
+	            <h5 style="color:0F3460">Evaluated Summaries</h5>
+
+	            <div id="brio-summary-human"></div> <br>
+	            <div id="t0-summary-human"></div> <br>
+	            <div id="gpt3-summary-human"></div> <br><br><br>
+
+
+	            <h5>Annotations</h5>
+	            <button id="annotator-1" class="button-custom button-annotator">Annotator 1</button>
+	            <button id="annotator-2" class="button-custom button-annotator">Annotator 2</button>
+	            <button id="annotator-3" class="button-custom button-annotator">Annotator 3</button>
+	            <div id="best-summary"></div> <br>
+	            <div id="worst-summary"></div> <br>
+	            
+	        </div>
+
+	    </div>
+
+
+    </div>
+
+    <br><br><br><br>
+
+    <div class="description" id="benchmark">
+    <h4 style="color:0F3460">Browse generated summaries for benchmark datasets</h4>
+    For four benchmark summarization datasets (CNN, Dailymail, XSum, Newsroom), we randomly sample 500 summaries from the standard test set. We provide generated summaries from 4 different summarization systems to support future work and standardize test sets. <br>
+
+    Select a dataset to view generated summaries. Click <a href="https://tagoyal.github.io/zero-shot-explorer/test-500.zip">here</a> to download the entire dataset. 
+    
+    
+	    <div class="container">
+	        <div class="outline intro-box">
+	            <span style="margin-right: 20px; font-size  : 15px;"><b>Choose Dataset</b></span>
+	            <div class="dropdown dropdown-menu-model dropdown-menu-benchmark" id="dataset-dropdown" style="display:inline-flex;">
+	                <span>CNN</span>
+	                <ul style="display: none; background: white;" class="dropdown-menu">
+	                    <li dataset-name="cnn">CNN</li>
+	                    <li dataset-name="dm">DailyMail</li>
+	                    <li dataset-name="xsum">XSum</li>
+	                    <li dataset-name="newsroom">Newsroom</li>
+	                </ul>    
+
+	            </div>
+	            <div>
+	                <button id="sample-1" class="button-custom button-sample">Example 1</button>
+	                <button id="sample-2" class="button-custom button-sample">Example 2</button>
+	                <button id="sample-3" class="button-custom button-sample">Example 3</button> &nbsp; &nbsp; &nbsp;
+	                <button id="random-sample" class="button-custom">Randomly sample</button>
+	            </div>
+
+	            <h5>Input Article</h5> 
+	            <div class="content-box">
+	                
+	                <div id="article-display-box"></div>
+	            </div>
+	        </div>
+	        <div class="outline summary-box" style="margin-top: 120px;">
+	            <h5> Generated Summaries</h5>
+
+	            <div id="pegasus-summary"></div> <br><br>
+	            <div id="brio-summary"></div> <br><br>
+	            <div id="t0-summary"> </div> <br><br>
+	            <div id="gpt3-summary"></div> <br><br>
+	            
+	        </div>
+
+	    </div>
+
+	&#42;&#42; If the text-davinci-002 generates a numbered list, we post-process it and remove the numbering to align with the outputs of other summarization systems. This is similar to how the CNN/DM dataset was constructed from a list of bullet points.
+	</div>
+	<br><br>
+	<div class="description">
+	    <h4 style="color:0F3460">Citation</h4>
+	    <div style="background: #F5F5F5; border: 3px solid #D6D6D6; overflow-x: scroll; width: 100%; padding: 15px;">
+	      @article{goyal2022zeroshotnews, <br>
+	          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; title={News Summarization and Evaluation in the Era of GPT-3}, <br>
+	          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; author={Tanya Goyal, Junyi Jessy Li, Greg Durrett}, <br>
+	          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; year={2022}, <br>
+	          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; journal={arXiv preprint} <br>
+	      } <br>
+    </div>
+
+    If you have any questions, please contact <a href="https://tagoyal.github.io/">Tanya Goyal</a>: tanyagoyal@utexas.edu 
+	</div>
+
+
+
+</body>
+</html>
+
