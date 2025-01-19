@@ -1,0 +1,697 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>CS 4740: Natural Lanugage Processing (Spring 2025, undergraduate)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="75672b6e-0a66-480c-a110-e892aa208a91" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📝</span></div><h1 class="page-title">CS 4740: Natural Lanugage Processing (Spring 2025, undergraduate)</h1><p class="page-description"></p></header><div class="page-body"><h2 id="ccb0d326-4300-4d93-a301-f501e01d7105" class=""><mark class="highlight-blue">Cross-listed as COGST 4740 / LING 4474 / CS 5740</mark></h2><p id="57740168-06b0-4932-9fb1-bec61a28ead0" class="">
+</p><p id="fec9a600-fdce-49d5-8e75-bb796ac8a0c0" class=""><strong>Instructors: </strong><a href="https://www.cs.cornell.edu/home/cardie/">Claire Cardie</a>, <a href="https://tagoyal.github.io/">Tanya Goyal</a></p><p id="17823d1a-3753-8007-a92c-df7587f802c9" class=""><strong>TAs: </strong>Wayne Chen, Son Tran, Oliver Li, Tejal Nair, Emily Wang, Cory Phillips, Alkim Arguz, Pun Chaixanien, Majd Aldaye, Brandon Li, Yuqing Wu, Ellie Dawson, Sean Cavalieri, Carter Larsen</p><p id="17823d1a-3753-80be-a76c-f497dac5634c" class=""><strong>Course Administrative Assistant</strong>: Amy Finch Elser (email: <a href="mailto:ahf42@cornell.edu">ahf42@cornell.edu</a>)</p><p id="d01764ed-dafd-4199-af45-9c2df21c900f" class=""><strong>Lecture:</strong> MW 1.25 p.m. - 2.40 p.m., Olin Hall 155<strong> </strong></p><p id="46d09e94-8875-4127-bc3d-17a0637ebd56" class=""><strong>Office Hours and communication with staff: </strong><div class="indented"><p id="17823d1a-3753-8047-bf68-c16de723fafe" class=""><strong>Instructor Office Hours — </strong>Claire Cardie (11 a.m - 12 noon Monday,<mark class="highlight-red"> </mark><mark class="highlight-default">Gates 417</mark>), Tanya Goyal (3p.m. - 4p.m. Thursday, Gates 441A) or by appointment (emails: <a href="mailto:cardie@cs.cornell.edu">cardie@cs.cornell.edu</a>, <a href="mailto:tanyagoyal@cornell.edu">tanyagoyal@cornell.edu</a>)</p><p id="17823d1a-3753-8046-a640-cb4d6697700c" class=""><strong>TA Office Hours — </strong><mark class="highlight-red">TBD</mark></p><p id="17823d1a-3753-8005-a61e-f53b4aa94a0a" class="">
+</p></div></p><h3 id="17823d1a-3753-806d-93fc-c707c7b381a3" class=""><mark class="highlight-red"><strong>[Link to </strong></mark><mark class="highlight-red"><strong><a href="syllabus.html">course syllabus and schedule</a></strong></mark><mark class="highlight-red"><strong> here]</strong></mark></h3><p id="17823d1a-3753-80c2-94db-e160fd1fe85b" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="17823d1a-3753-802e-a523-d4b1bb0062d4"><div style="width:100%"><h2 id="17823d1a-3753-8065-9391-db7e70f9942a" class=""><mark class="highlight-blue"><strong><span style="border-bottom:0.05em solid">Description</span></strong></mark></h2><p id="17723d1a-3753-8001-8479-d2d2d1c29e0b" class="">This course is an introduction to modern natural language processing (NLP). Today, NLP is at the heart of many exciting technologies including the widely popular large language models (LLMs) like ChatGPT and Claude. This course will cover core problems in traditional NLP, such as sequence tagging of part-of-speech tags for sentences or identifying named entities in text using approaches like hidden markov models and early neural methods for NLP like recurrent neural networks (RNNs). The second half of this course will lay the foundation for understanding how frontier LLMs like ChatGPT are built. We will cover transformer model architectures that form the backbone of these models, training recipes used, and other ingredients that contribute to building these powerful systems. We will also cover topics related to factualily, retrieval-augmented language models, efficiency, etc. At the end of this course, students should be in a position to understand and critique recent research in NLP. </p></div></figure><p id="17823d1a-3753-80ff-ac03-c29cad04af0b" class="">
+</p><p id="17823d1a-3753-80f8-afd5-df678b202876" class=""><strong>Skip to the relevant section of this page:</strong></p><ul id="17823d1a-3753-8084-a16b-d1cf8c6a364d" class="bulleted-list"><li style="list-style-type:disc"><a href="#17723d1a-3753-8003-80e2-e528dbf3ca84">Resources (Schedule, Textbooks, Assignments, etc.)</a></li></ul><ul id="17823d1a-3753-80e4-a3bf-eae3b07308fd" class="bulleted-list"><li style="list-style-type:disc"><a href="#17723d1a-3753-8063-9def-cc63af0f9f2b">Prerequisites</a></li></ul><ul id="17823d1a-3753-80cc-968d-f29b102e1ddf" class="bulleted-list"><li style="list-style-type:disc"><a href="#17723d1a-3753-80ec-9b99-d86194c0dbd2">Course Policies</a><ul id="7ca7d525-cd20-45b9-809f-aa93afb68af2" class="bulleted-list"><li style="list-style-type:circle"><a href="#17723d1a-3753-8004-b6b1-c78b4f48f511">Grading</a></li></ul><ul id="44e19ca0-dd5a-41d8-8ef8-8483588b423d" class="bulleted-list"><li style="list-style-type:circle"><a href="#17823d1a-3753-809b-b74a-d0133878f1fd">Late Submission Policy</a></li></ul><ul id="17823d1a-3753-80dd-be02-d35ca2556b49" class="bulleted-list"><li style="list-style-type:circle"><a href="#17823d1a-3753-8039-b6d7-c83eb1d4a6b3">Policy on use of Generative AI</a></li></ul><ul id="a81e78df-e8c5-467f-b819-694e8b12bf41" class="bulleted-list"><li style="list-style-type:circle"><a href="#17723d1a-3753-8099-baab-d1820a0cc2e9">S/U enrollment and Auditing</a></li></ul></li></ul><ul id="17823d1a-3753-808a-827e-c3a90d3fd126" class="bulleted-list"><li style="list-style-type:disc"><a href="#17723d1a-3753-80a3-9923-dab574dd4479">SDS accomodations</a></li></ul><p id="17823d1a-3753-80b3-ac71-c61efaaba927" class="">
+</p><h2 id="17723d1a-3753-8003-80e2-e528dbf3ca84" class=""><mark class="highlight-blue">Resources</mark></h2><ol type="1" id="adff3b5c-f681-4284-b7ca-3f158003a8f5" class="numbered-list" start="1"><li><strong>Schedule: </strong>The course schedule (including lectures materials and assignments) is provided <mark class="highlight-blue"><a href="syllabus.html">here</a></mark>. </li></ol><ol type="1" id="17723d1a-3753-804d-88b9-c4e9eb027cbd" class="numbered-list" start="2"><li><strong>Textbooks: </strong>We will follow <strong>Jurafsky and Martin, Speech and Language Processing, 3rd edition (draft). </strong>Free online version is available<mark class="highlight-red"> </mark><mark class="highlight-blue"><a href="https://web.stanford.edu/~jurafsky/slp3/">here</a></mark>. </li></ol><ol type="1" id="17723d1a-3753-80b9-aad5-c5e4ca06bc99" class="numbered-list" start="3"><li><strong>Assignments: </strong>You will submit assignments using <strong>Gradescope. </strong>For coding parts of the assignments, you will use colab. </li></ol><p id="17723d1a-3753-8049-a207-cfc6f969e5e6" class="">
+</p><h2 id="17723d1a-3753-8063-9def-cc63af0f9f2b" class=""><mark class="highlight-blue"><strong>Prerequisites</strong></mark><mark class="highlight-blue"> </mark></h2><ol type="1" id="17723d1a-3753-809c-8294-ce9b8a570005" class="numbered-list" start="1"><li>Strong programming skills are important. Three semesters of programming classes are strongly recommended (e.g., completion of CS3110). CS2110 may suffice if you individually could have successfully and easily completed the assignments by yourself.</li></ol><ol type="1" id="17723d1a-3753-80c9-b708-e326ed039339" class="numbered-list" start="2"><li>Python experience. Pytorch experience (as through CS4780) not required but some students report it being very helpful.</li></ol><ol type="1" id="17723d1a-3753-805e-a8fd-de35c3c32daa" class="numbered-list" start="3"><li>Comfort with elementary probability.</li></ol><ol type="1" id="17723d1a-3753-80cf-9e67-f357b34db8ed" class="numbered-list" start="4"><li>Clear understanding of matrix and vector operations.</li></ol><ol type="1" id="17723d1a-3753-8006-91ec-e45f00811c9f" class="numbered-list" start="5"><li>Familiarity with differentiation.</li></ol><p id="17723d1a-3753-80fb-85bc-f061212c02ac" class="">You will be asked to complete HW0 (see the schedule page) to test these prerequisites. If you find yourself struggling with HW0, please talk to the course staff to discuss if this course is appropriate for you. </p><p id="17823d1a-3753-8010-bd11-d6037e0495e0" class="">
+</p><h2 id="17723d1a-3753-80ec-9b99-d86194c0dbd2" class=""><mark class="highlight-blue"><span style="border-bottom:0.05em solid">Course Policies</span></mark></h2><p id="17723d1a-3753-801b-9f59-da7fbb03357f" class="">Note: We reserve the right to make necessary changes to any policy on this page if it would jeopardize the smooth running of the course. We aim to avoid making alterations, and will try to be as transparent as possible about key changes, e.g., by posting to Ed Discussions.</p><h3 id="17723d1a-3753-8004-b6b1-c78b4f48f511" class=""><mark class="highlight-blue"><span style="border-bottom:0.05em solid">Grading:</span></mark></h3><ol type="1" id="17723d1a-3753-80c4-86c1-cbba8fde30ea" class="numbered-list" start="1"><li><strong>Assignments (67%): </strong>This course will consist of 1 review assignment and 4 programming assignments (with possible milestones).<ol type="a" id="17723d1a-3753-80c2-b42b-d2a428d9acb7" class="numbered-list" start="1"><li><strong>Review assignment / HW0 (3%)</strong>:<strong> </strong>This is designed to test whether you have the necessary pre-requisite knowledge for this course. You must do this assignment individually and it should take you less than 2.5 hours to complete. You are required to submit this assignment although <strong>we will not check the correctness of this assignment.</strong> All students who turn in a <em>reasonable</em> submission will get the full grade on this. Importantly, if you have difficulty completing any part of this assignment, please contact the course staff to discuss whether this course is appropriate for you. </li></ol><ol type="a" id="17723d1a-3753-8062-bc31-f58848a1490f" class="numbered-list" start="2"><li><strong>Full homework assigments (4 assignments, 16% each)</strong>: These will be primarily coding assignments including (sometimes) non-coding components. We expect these to take tens of hours each. You can do these assignments individually or in groups of 2; all students in a group will recieve the same grade. We strongly encourage you to do these assignments in a group. <p id="17723d1a-3753-80d0-88db-eea0f047fe40" class=""><mark class="highlight-red"><strong>(Only CS 5750) </strong></mark><mark class="highlight-default">Students enrolled in CS5740 must complete an additional component for each 4740 homework </mark><mark class="highlight-default"><strong>individually. </strong></mark><mark class="highlight-default">These</mark> components are graded as &quot;satisfactory&quot;, &quot;borderline&quot;, and &quot;unsatisfactory&quot;. If a student receives two &quot;borderline&quot;s or one &quot;unsatisfactory&quot; among the four homeworks, we reserve the right to lower the student&#x27;s letter grade as computed for 4740 by the equivalent of a &quot;level&quot;, for example, from a B to a B-.</p></li></ol></li></ol><ol type="1" id="17723d1a-3753-80d3-9927-fcca468fde64" class="numbered-list" start="2"><li><strong>Exams (midterm 16%, final 16%)</strong>: These will test individual conceptual knowledge. <strong>To receive a C- or above in the course, students must receive at least a C- on both exams.</strong></li></ol><ol type="1" id="17723d1a-3753-8005-868f-d024b38285fb" class="numbered-list" start="3"><li><strong>Course evaluation (1%): </strong>We will assign 1% of the grade for filling out the course evaluation form. </li></ol><p id="17823d1a-3753-803f-ae6e-d2a162b5b392" class="">
+</p><p id="17723d1a-3753-8079-886d-d70ea431828d" class=""><strong><span style="border-bottom:0.05em solid">Collaboration policies: </span></strong><div class="indented"><ol type="1" id="17723d1a-3753-80b0-90ff-fa5ee81f5813" class="numbered-list" start="1"><li>Groups of two are allowed on all assignments except the review assignment (HW0) and the CS5740 add-on assignments. You can partner will anyone in the class (irrespective of registration to the undergraduate or graduate level of the course, or letter grade or S/U enrollment) <strong>but please discuss time and effort expectations with your prospective partner.</strong></li></ol><ol type="1" id="17823d1a-3753-800c-9281-c10be43b0156" class="numbered-list" start="2"><li>You do not have to have the same partner on each assignment. </li></ol><ol type="1" id="17723d1a-3753-80b4-b4b4-c6a369b2a005" class="numbered-list" start="3"><li>Until all students’ submissions have been posted for the assignments, you must never consult any other groups’ written submission or code in any form. You are allowed to discuss conceptual doubts (e.g. how does the viterbi algorithm work?) but all the code and written report you submit must be your own (or your groups’). Additionally, you must not copy paste solutions from external sources like Stack Overflow or ChatGPT. Using these resources for debugging is allowed. </li></ol><ol type="1" id="17823d1a-3753-80cc-b656-e3f013b34673" class="numbered-list" start="4"><li>Please refer to the <strong><a href="https://www.notion.so/CS-4740-Natural-Lanugage-Processing-Spring-2025-undergraduate-75672b6e0a66480ca110e892aa208a91?pvs=21">policy on the use of Generative AI</a></strong> (e.g. chatGPT, CoPilot, Claude, etc.).</li></ol></div></p><p id="17823d1a-3753-80eb-8a25-ef5926ba2ff1" class="">
+</p><p id="17823d1a-3753-809b-b74a-d0133878f1fd" class=""><strong><span style="border-bottom:0.05em solid">Late Submission Policy: </span></strong></p><ol type="1" id="17823d1a-3753-807d-a275-f7ee3e052d2a" class="numbered-list" start="1"><li>Each student is given <strong>5 slip days</strong> to use throughout the course for the homeworks. You are allowed to use a maximum of 2 slip days per homework assignment. An example use of slip days is: 2 slip days for HW1, 1 slip days for HW2, 2 slip days for HW3 and none for HW4. </li></ol><ol type="1" id="17823d1a-3753-8029-a19b-dbb8e0878d49" class="numbered-list" start="2"><li>After the slip days are exhausted, you will incur a penalty of 10% on your grade for each additional day beyond the deadline for the assignment. <strong>We will count slip days for each student individually. </strong>If you are working in a group, members may incur different penalties for late submission depending on their individual slip day balance. Please co-ordinate appropriately with your partner. </li></ol><ol type="1" id="17823d1a-3753-8080-9a5a-edf5e5ac98e3" class="numbered-list" start="3"><li> You do not need to use slip days if you are sick or for other extenuating circumstances. Please email the instructors for these cases.</li></ol><p id="17823d1a-3753-80c6-8c5f-c6122a94e196" class="">
+</p><h3 id="17723d1a-3753-80a3-9923-dab574dd4479" class=""><mark class="highlight-blue"><strong>Accommodations for Students with Disabilities: </strong></mark></h3><p id="17823d1a-3753-8080-a882-d5ae32d0d0eb" class="">Your access in this course is important to us. Please give us [the instructors, the administrative assistant] your Student Disability Services (SDS) accommodation letter early in the semester so that we have adequate time to arrange your approved academic accommodations. If you need an immediate accommodation, please send an email message to the instructors (<a href="mailto:cardie@cs.cornell.edu">cardie@cs.cornell.edu</a>, <a href="mailto:tanyagoyal@cornell.edu">tanyagoyal@cornell.edu</a>), administrative assistant (Amy Finch Elser; email: <a href="mailto:ahf42@cornell.edu">ahf42@cornell.edu</a>) and SDS at sds_cu@cornell.edu.</p><p id="17823d1a-3753-8098-9186-cd3c1c82d1d6" class="">
+</p><h3 id="17823d1a-3753-808b-b66a-d113d0a63672" class=""><mark class="highlight-blue"><strong>Other misc items: </strong></mark></h3><ol type="1" id="17723d1a-3753-8099-baab-d1820a0cc2e9" class="numbered-list" start="1"><li><strong>Enrollment options other than letter grades:</strong><ol type="a" id="17723d1a-3753-80ab-9820-dcb622920843" class="numbered-list" start="1"><li><strong>S/U enrollment</strong>: We will  grade all your assignments and exams as if you were taking this course for a letter grade. We will convert this final letter grade to S/U using this policy: C- of better → S, D+ or below → U. </li></ol><ol type="a" id="17723d1a-3753-80d0-a51f-db64c8a26f7f" class="numbered-list" start="2"><li><strong>Auditing: </strong>Sitting in on lectures is fine as long as there are enough physical seats. Students auditing the course, either officially in Student Center or unofficially (&quot;just sitting in&quot;), should <em><strong>not</strong></em> submit any work, partner with officially registered non-auditors, take any exams, or join office hours if the lines are long (we need to conserve our grading and staff resources). </li></ol></li></ol><ol type="1" id="17823d1a-3753-8039-b6d7-c83eb1d4a6b3" class="numbered-list" start="2"><li><strong>Policy on the use of generative AI (e.g. ChaGPT, CoPilot, Claude, etc.): </strong>We will release assignment-specific generative AI policies with each homework assignment. But, generally, remember that the goal of this course is to familiarize yourself with the basic building blocks of NLP systems. Therefore, you should never use ChatGPT or other generative AI engines to obtain the first drafts of your code or written responses. If you do use these, to say debug your code, you should explicitly state your use of these systems in your submitted work. </li></ol><p id="17823d1a-3753-8013-8b41-d48748a15f38" class="">
+</p><p id="17723d1a-3753-8045-b309-ce5ad220bd36" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
