@@ -1,0 +1,691 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>CS 6784: Generative Artificial Intelligence (Fall 2025, graduate)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="24823d1a-3753-80bc-8fbc-ebb018467077" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📝</span></div><h1 class="page-title">CS 6784: Generative Artificial Intelligence (Fall 2025, graduate)</h1><p class="page-description"></p></header><div class="page-body"><p id="24823d1a-3753-8038-87e8-e4f34db24ef0" class="">
+</p><p id="24823d1a-3753-80bd-9b59-f3e9e8b1d8cd" class=""><strong>Instructor: </strong>Tanya Goyal, tanyagoyal@cornell.edu<div class="indented"><p id="25323d1a-3753-8011-a8c2-d5e58d4322c5" class="">Office hours: TBD</p></div></p><p id="24823d1a-3753-808e-a82e-e3ab644c9e01" class=""><strong>Lecture: </strong>MW 1:25 pm - 2:40 pm, TBD</p><p id="24823d1a-3753-80ac-9825-e8260f31245f" class=""><strong>TA: </strong>Oliver Li<div class="indented"><p id="25323d1a-3753-8086-bd63-c64af78d392a" class="">Office hours: TBD</p></div></p><p id="24823d1a-3753-80ad-8d94-ecb4356a937c" class="">
+</p><p id="24823d1a-3753-80e2-bc4f-ce159233f52c" class=""><strong>Description: </strong></p><p id="25323d1a-3753-8023-8b5f-f11fc2cd94fb" class="">This is a graduate-level course which will deep dive into a different topic in Generative Artificial Intelligence each semester. The goal of this course is to familiarize yourselves with cutting-edge research in generative AI, learn how to read and critique research papers, conduct thorough literature reviews and communicate research ideas. The course is designed to be an interactive seminar, with the main deliverables being class participation/presentations and a final group project. This semester (Fall 2025) will cover the latest advancements in large language models (LLMs), focusing on three threads: (1) Reasoning, (2) Long-context Modeling, and (3) Factuality. </p><p id="25323d1a-3753-806b-af71-d64100e0c84b" class="">
+</p><p id="25323d1a-3753-804a-b118-e7c65062c542" class=""><strong>Course Structure</strong>: </p><p id="25223d1a-3753-80dd-aeaf-e9e012bf6d2b" class="">This course is intended for graduate students who are interested in learning about cutting-edge advancements in NLP and are familiar with machine learning and NLP fundamentals (see prerequisites). Classes will be a mix of instructor-led lectures and student-led discussion of research papers.</p><p id="25323d1a-3753-8040-8ac7-f690be195f44" class="">For the seminar portion, groups of students will present recent research papers and lead discussions on it. We will follow a <a href="https://colinraffel.com/blog/role-playing-seminar.html">role-playing seminar</a> format for this course (exact roles will be decided after the first week of class). Each week, we will discuss ~2-4 papers. The discussions will be led by 1 lead presenter, who will present the technical details and results in the paper, and 2-3 additional students who will be assigned specific “presenter roles”; these are designed for students to learn how to perform different parts of the research pipeline. All students are expected to read these papers carefully and participate in class discussions. </p><p id="25323d1a-3753-80fe-9198-e980d34c867c" class="">
+</p><p id="25323d1a-3753-8039-bab0-f7f206065819" class=""><strong>Prerequisites: </strong></p><p id="25323d1a-3753-8019-886e-d4760f9980af" class="">This course assumes that you have basic familiarity with machine learning and (for this semester) langauge modelling (e.g. do you know what transformers are?). Coursework in machine learning or natural language processing at the level of CS 3700/4780/4740 or equivalent is required. We may admit undergraduate students to this course if they have taken the above courses at instructor discretion. Please email me if you want to enroll but are unsure if you meet the prerequisites. </p><p id="25323d1a-3753-8004-8ddc-f3fafd267e9b" class="">If you are looking for a lecture-based course for natural language processing, you should consider taking CS 4740/5740 instead which will course will be offered next semster; see <a href="https://www.cs.cornell.edu/courses/cs4740/2025sp/">here</a> for the previous offering for that course. </p><p id="25323d1a-3753-80f6-9aaf-d4f8e896d453" class="">
+</p><p id="25223d1a-3753-8050-9197-f192b2f7d103" class=""><strong>Grading: </strong></p><p id="25323d1a-3753-8085-857b-c44fe57e24dc" class="">The contribution of the different course components to the final grades are outlined in the table below.</p><table id="25223d1a-3753-802e-b115-eefdb11edd56" class="simple-table"><thead class="simple-table-header"><tr id="25223d1a-3753-800b-9f4d-fb7c0845bd30"><th id="bwgc" class="block-color-gray_background simple-table-header" style="width:310.083984375px">Course Component</th><th id="A&gt;Bi" class="block-color-gray_background simple-table-header" style="width:147px">% of grade</th><th id="m@uD" class="block-color-gray_background simple-table-header">Due Date</th></tr></thead><tbody><tr id="25223d1a-3753-808a-958f-d53a0d04b609"><td id="bwgc" class="block-color-blue_background" style="width:310.083984375px"><mark class="highlight-blue_background"><strong>In-class presentations</strong></mark></td><td id="A&gt;Bi" class="block-color-blue_background" style="width:147px"></td><td id="m@uD" class="block-color-blue_background"></td></tr><tr id="25223d1a-3753-8087-b81e-fdc2f9999ad0"><td id="bwgc" class="" style="width:310.083984375px">Role-play presentations</td><td id="A&gt;Bi" class="" style="width:147px">25%</td><td id="m@uD" class=""></td></tr><tr id="25223d1a-3753-8042-aa9a-fdb1c00762e9"><td id="bwgc" class="" style="width:310.083984375px">In-class quiz (3 quizes)</td><td id="A&gt;Bi" class="" style="width:147px">10%</td><td id="m@uD" class=""></td></tr><tr id="25323d1a-3753-801b-ac1e-d7b175c73dbc"><td id="bwgc" class="" style="width:310.083984375px">In-class participation</td><td id="A&gt;Bi" class="" style="width:147px">5%</td><td id="m@uD" class=""></td></tr><tr id="25223d1a-3753-80b4-a2ec-c38bcb7d994b"><td id="bwgc" class="block-color-blue_background" style="width:310.083984375px"><strong>Write-ups</strong></td><td id="A&gt;Bi" class="block-color-blue_background" style="width:147px"></td><td id="m@uD" class="block-color-blue_background"></td></tr><tr id="25223d1a-3753-80ee-aa92-f00e7e1dc168"><td id="bwgc" class="" style="width:310.083984375px">Paper reviews (due 3 times)</td><td id="A&gt;Bi" class="" style="width:147px">15%</td><td id="m@uD" class=""></td></tr><tr id="25223d1a-3753-80ee-811a-dbe8c4315530"><td id="bwgc" class="block-color-blue_background" style="width:310.083984375px"><mark class="highlight-blue_background"><strong>Final Project</strong></mark></td><td id="A&gt;Bi" class="block-color-blue_background" style="width:147px"></td><td id="m@uD" class="block-color-blue_background"></td></tr><tr id="25223d1a-3753-80de-951c-ccf8bff9eac0"><td id="bwgc" class="" style="width:310.083984375px">Initial Check-in (1-2 pages)</td><td id="A&gt;Bi" class="" style="width:147px">5%</td><td id="m@uD" class=""></td></tr><tr id="25223d1a-3753-80b8-9bed-e574e4542d0f"><td id="bwgc" class="" style="width:310.083984375px">Mid-term check-in (2-3 pages)</td><td id="A&gt;Bi" class="" style="width:147px">10%</td><td id="m@uD" class=""></td></tr><tr id="25223d1a-3753-80dd-8c55-d3805e75e215"><td id="bwgc" class="" style="width:310.083984375px">Final project (4-6 pages)</td><td id="A&gt;Bi" class="" style="width:147px">25%</td><td id="m@uD" class=""></td></tr><tr id="25223d1a-3753-80cd-af13-d9dc74804f8f"><td id="bwgc" class="" style="width:310.083984375px">Final project Presentation</td><td id="A&gt;Bi" class="" style="width:147px">5%</td><td id="m@uD" class="">Last two class days</td></tr></tbody></table><p id="25223d1a-3753-808e-b179-d3438823732b" class=""><strong>In-class partipation: </strong>This accounts for a total of 20% of your grade. </p><ol type="1" id="25323d1a-3753-8071-9870-fa422abfd352" class="numbered-list" start="1"><li>A majority of this grade (15%) will be based on the <strong>one paper presentation</strong> for which you are the lead presentator, i.e. responsible for presenting the main technical content. </li></ol><ol type="1" id="25323d1a-3753-8086-934a-dbb2282b4ca8" class="numbered-list" start="2"><li>The remaining 10% will be based on your role-playing presentations for the at most 2-3 additional papers. While we may change roles assigned to each paper depending on relevance, you can expect these to be one of <strong>Scientific Peer Reviewer, Archaeologist, </strong>or <strong>Academic Researcher</strong>. See <a href="https://colinraffel.com/blog/role-playing-seminar.html">this page</a> for details on what these roles entail. </li></ol><p id="25323d1a-3753-8095-9ab4-c2e3f365e0fe" class="">
+</p><p id="25323d1a-3753-80bf-87ec-c97d9ced520c" class=""><strong>In-class quizes: </strong>Broadly, we will cover three topics in this course: (1) Reasoning Models, (2) Long-context Modelling, (3) Factuality. Each of these topics will be discussed for approximately 5-6 lectures. After the conclusion of each topic block, we will have an in-class quiz about the papers discussed. There will be a total of 3 quizzes and we will drop the lowest scoring one. Cumulatively, quizzes will account for 10% of your grade. </p><p id="25323d1a-3753-80d3-8741-d7b18da2dda8" class="">You will not be penalized if you miss quizzes because of sickness or other extenuating circumstances. Please email the instructor for these cases. If you miss one quiz, we will base your grade on the remaining two quizzes. If you miss two or morequizzes for valid reasons, we will work with you on alternatives.</p><p id="25323d1a-3753-801e-9ce7-e3f6d5443e7a" class="">
+</p><p id="25323d1a-3753-808d-8418-f2e392bfeed0" class=""><strong>Final Project:</strong> </p><p id="25323d1a-3753-8008-9722-cc1744e77977" class="">You will conduct an independent research study as part of this course. See guidelines here (TBD). The assignment is deliberately kept open-ended and you are free to choose your topic. You can potentially (1) define an original research problem in language modeling, (2) investigate capabilities of current LLMs on a new interesting benchmark or problem setting, (3) reproduce results from a prior study and conduct some additional analysis or ablations. Note that this is not an exhaustive list, and you can choose other types of projects. You will be graded on proposal document (5%), project check-in (10%), presentation (5%) and final report (25%).</p><p id="24823d1a-3753-8046-b8e5-d935b8402edb" class="">
+</p><h2 id="24823d1a-3753-8016-a689-d5a18ebf6fcb" class=""><mark class="highlight-red">Schedule Page</mark></h2><figure id="24823d1a-3753-807c-a996-e91cc0379224" class="link-to-page"><a href="">Syllabus</a></figure><p id="25323d1a-3753-80e1-954f-dfd7fbba0a0c" class="">
+</p><p id="24823d1a-3753-8001-97dd-dfb5514dc8ac" class=""><strong>Policy on the use of generative AI (e.g. ChaGPT, CoPilot, Claude, etc.): </strong>The goal of this course is to learn how to read, critique and propose reserach ideas. You should never use ChatGPT (or similar AI tools) to offload these congnitive activities. You should not use ChatGPT to create the first draft of your write-ups, conduct your literature reviews, or other similar functions. You are permitted to use ChatGPT as a collaborative write-up tool but all the core ideas your submit must be yours. </p><p id="24823d1a-3753-809a-8624-d9f0e18e4ff0" class="">
+</p><p id="24823d1a-3753-8053-8338-fbd9dcb75873" class=""><strong>Accommodations for Students with Disabilities: </strong>Your access in this course is important to me. Please give me [the TA, the Course Coordinator] your Student Disability Services (SDS) accommodation letter early in the semester so that we have adequate time to arrange your approved academic accommodations. If you need an immediate accommodation, please speak with me after class or send an email message to me and SDS at sds_cu@cornell.edu.</p><p id="24823d1a-3753-80fa-b687-fcde109282bd" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
